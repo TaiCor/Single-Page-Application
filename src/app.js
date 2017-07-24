@@ -1,1 +1,1 @@
-console.log('Hello');
+import angular from 'angular';
