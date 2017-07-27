@@ -7,7 +7,9 @@
 </head>
 
 <body ng-app="fotoalbum">
-    <photosComponent></photosComponent>
+    <post post="post" ng-repeat="post in $ctrl.posts">>
+        <photosComponent></photosComponent>
+    </post
 </body>
 
 </html>
