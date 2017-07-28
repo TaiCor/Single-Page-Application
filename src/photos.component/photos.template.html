@@ -1,2 +1,4 @@
-<img ng-src="{{$ctrl.post}}">
-<p>{{$ctrl.id}}</p>
+<li ng-repeat="post in $ctrl.posts">
+  <img src="{{post.url}}">
+  <p>{{post.id}}</p>
+</li>

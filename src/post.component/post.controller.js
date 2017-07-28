@@ -1,3 +1,5 @@
-export default class postController {
-  
-}
+// export default class postController {
+//   constructor(){
+//     this.images = dsfds
+//   }
+// }
