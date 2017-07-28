@@ -8,6 +8,14 @@ export default class controllerPhotos {
       {
         'id': 2,
         'url': 'https://docs.angularjs.org/img/angularjs-for-header-only.svg'
+      },
+      {
+        'id': 3,
+        'url': 'https://docs.angularjs.org/img/angularjs-for-header-only.svg'
+      },
+      {
+        'id': 4,
+        'url': 'https://docs.angularjs.org/img/angularjs-for-header-only.svg'
       }
     ]
   }
