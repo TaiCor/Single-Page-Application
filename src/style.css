@@ -1,8 +1,3 @@
 body {
     background-color: whitesmoke
 }
-ol {
-    list-style-image:none;
-    list-style-position:outside;
-    list-style-type:none;
-}
