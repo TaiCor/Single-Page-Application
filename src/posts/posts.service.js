@@ -8,6 +8,5 @@ export default class postsService {
 
   getPosts () {
     return this.$q.when(posts)
-    // return this.$http.get('./data.json')
   }
 }
