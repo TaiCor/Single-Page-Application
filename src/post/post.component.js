@@ -3,7 +3,7 @@ import controller from './post.controller'
 
 export default {
   bindings: {
-    params: '='
+    post: '='
   },
   template,
   controller

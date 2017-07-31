@@ -1,7 +1,8 @@
 export default class postController {
   $onInit () {
-    this.id = this.params.id
-    this.url = this.params.url
-    this.title = this.params.title
+    this.id = this.post.id
+    this.url = this.post.url
+    this.title = this.post.title
+    this.description = this.post.description
   }
 }
