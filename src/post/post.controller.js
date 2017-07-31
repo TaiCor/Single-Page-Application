@@ -1,7 +1,9 @@
 export default class postController {
   constructor () {
-    this.id = this.param.id
-    this.url = this.param.url
-    this.title = this.param.title
+    this.$onInit = () => {
+      this.id = this.params.id
+      this.url = this.params.url
+      this.title = this.params.title
+    }
   }
 }
