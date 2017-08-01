@@ -4,5 +4,6 @@ export default class postController {
     this.url = this.post.url
     this.title = this.post.title
     this.description = this.post.description
+    this.user = this.post.user
   }
 }

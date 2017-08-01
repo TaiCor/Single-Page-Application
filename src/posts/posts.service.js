@@ -5,7 +5,6 @@ export default class postsService {
     this.$http = $http
     this.$q = $q
   }
-
   getPosts () {
     return this.$q.when(posts)
   }
