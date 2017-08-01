@@ -1,6 +1,6 @@
-<md-card>
-  <h1 class='md-title'>{{$ctrl.title}}</h1>
+<md-card flex="50" flex-offset="25">
+  <h1 class='md-headline' layout="row" layout-align="center">Title: {{$ctrl.title}}</h1>
   <img class="md-card-image" src="{{$ctrl.url}}">
-  <p>{{$ctrl.description}}</p>
-  <p>picture id: {{$ctrl.id}}</p>
+  <p class="md-title" layout-padding>Description: {{$ctrl.description}}</p>
+  <p class="md-subheader" layout="row" layout-align="end">picture id: #{{$ctrl.id}}</p>
 </md-card>
