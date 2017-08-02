@@ -7,14 +7,8 @@
 </head>
 
 <body ng-app="fotoalbum">
-  <md-toolbar>
-    <md-tabs>
-      <md-tab ui-sref='allposts'>All Posts</md-tab>
-      <md-tab ui-sref='mypost'>My Posts</md-tab>
-    </md-tabs>
-  </md-toolbar>
-  <posts></posts>
-  <my-posts></my-posts>
+  <md-button ui-sref='allposts'>All Posts</md-button>
+  <md-button ui-sref='myposts'>My Posts</md-button>
   <ui-view></ui-view>
 </body>
 
