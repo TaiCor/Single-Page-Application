@@ -1,7 +1,7 @@
 export default class myPostController {
-  constructor (myPostService) {
-    this.myPostService = myPostService
-    myPostService.getMyPosts()
+  constructor (serviceMyPost) {
+    this.serviceMyPost = serviceMyPost
+    serviceMyPost.getMyPosts()
       .then(myPosts => {
         this.myPosts = myPosts
       })

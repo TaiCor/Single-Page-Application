@@ -7,7 +7,15 @@
 </head>
 
 <body ng-app="fotoalbum">
+  <md-toolbar>
+    <md-tabs>
+      <md-tab>All Posts</md-tab>
+      <md-tab>My Posts</md-tab>
+    </md-tabs>
+  </md-toolbar>
   <posts></posts>
+  <my-posts></my-posts>
+  <ui-view></ui-view>
 </body>
 
 </html>
