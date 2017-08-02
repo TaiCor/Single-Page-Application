@@ -1,11 +1,5 @@
 body {
     background-color: whitesmoke
 }
-a:-webkit-any-link {
-    text-decoration: none;
-}
 
--webkit-a:visited {
-    text-decoration: none;
-}
 
