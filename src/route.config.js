@@ -4,11 +4,11 @@ import myPostsComponent from './myposts/myposts.component'
 routes.$inject = ['$stateProvider']
 export default function routes ($stateProvider) {
   $stateProvider
-    .state('allPosts', {
+    .state('allposts', {
       url: '/allposts',
       component: allPostComponent
     })
-    .state('myPosts', {
+    .state('myposts', {
       url: '/myposts',
       component: myPostsComponent
     })
