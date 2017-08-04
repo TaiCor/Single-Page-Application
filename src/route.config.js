@@ -1,5 +1,5 @@
-routes.$inject = ['$stateProvider']
-export default function routes ($stateProvider) {
+routes.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
+export default function routes ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('allposts', {
       url: '/allposts',
@@ -10,4 +10,9 @@ export default function routes ($stateProvider) {
       url: '/myposts',
       component: 'myPosts'
     })
+   $urlRouterProvider
+    .otherwise('/allposts')
+  $locationProvider
+    .html5Mode(true)
+}
 }
