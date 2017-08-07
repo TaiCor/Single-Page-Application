@@ -10,9 +10,8 @@ export default function routes ($stateProvider, $urlRouterProvider, $locationPro
       url: '/myposts',
       component: 'myPosts'
     })
-   $urlRouterProvider
+  $urlRouterProvider
     .otherwise('/allposts')
   $locationProvider
     .html5Mode(true)
-}
 }
