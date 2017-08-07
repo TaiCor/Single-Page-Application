@@ -12,6 +12,4 @@ export default function routes ($stateProvider, $urlRouterProvider, $locationPro
     })
   $urlRouterProvider
     .otherwise('/allposts')
-  $locationProvider
-    .html5Mode(true)
 }
