@@ -1,4 +1,8 @@
+<md-radio-group layout="row" ng-model="query">
+  <md-radio-button value="title" class="md-primary">Alphabetical</md-radio-button>
+  <md-radio-button value="-date" class="md-primary">New first</md-radio-button>
+</md-radio-group>
 <h1 class="md-display-2" layout="row" layout-align="center">My Posts</h1>
 <div class="column">
-  <post post="post" ng-repeat="post in $ctrl.myPosts"></post>
+  <post post="post" ng-repeat="post in $ctrl.myPosts | orderBy: query"></post>
 </div>

@@ -5,5 +5,6 @@ export default class postController {
     this.title = this.post.title
     this.description = this.post.description
     this.user = this.post.user
+    this.date = this.post.date
   }
 }
