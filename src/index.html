@@ -8,10 +8,14 @@
 </head>
 
 <body ng-app="fotoalbum">
-  <md-toolbar layout="row" layout-align="start center">
-  <md-button class='md-raised' ui-sref='allposts'>All Posts</md-button>
-  <md-button class='md-raised' ui-sref='myposts'>My Posts</md-button>
+  <md-toolbar layout="row" layout-align='start center'>
+    <md-button class='md-raised' ui-sref='allposts'>All Posts</md-button>
+    <md-button class='md-raised' ui-sref='myposts'>My Posts</md-button>
   </md-toolbar>
+  <md-radio-group layout="row">
+    <md-radio-button value="" class="md-primary">Alphabetical</md-radio-button>
+    <md-radio-button value="" class="md-primary">New first</md-radio-button>
+  </md-radio-group>
   <ui-view></ui-view>
 </body>
 

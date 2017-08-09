@@ -1,6 +1,6 @@
 import comments from '../jsons/comments'
 
-export default class commentService {
+export default class commentsService {
   constructor ($q, $http) {
     this.$q = this.$q
     this.$http = this.http

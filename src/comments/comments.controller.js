@@ -1,5 +1,12 @@
-export default class commentController {
+export default class commentsController {
+  constructor (commentsService) {
+    this.commentsService = this.commentsService
+    commentsService.getComments()
+    .then(comments => {
+      this.comments = comments
+    })
+  }
   getCommentsCount () {
-    return this.comment.length
+    return this.comments.length
   }
 }
