@@ -12,8 +12,8 @@
     <md-button class='md-raised' ui-sref='myposts'>My Posts</md-button>
   </md-toolbar>
   <md-radio-group layout="row">
-    <md-radio-button value="kl" class="md-primary">Alphabetical</md-radio-button>
-    <md-radio-button value=";" class="md-primary">New first</md-radio-button>
+    <md-radio-button value="postTitle" class="md-primary" ng-click="sortBy('$ctrl.title')">Alphabetical</md-radio-button>
+    <md-radio-button value="postDate" class="md-primary"  ng-click="sortBy('$ctrl.date')">New first</md-radio-button>
   </md-radio-group>
   <ui-view></ui-view>
 </body>
