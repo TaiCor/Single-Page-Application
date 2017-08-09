@@ -1,7 +1,7 @@
-<!-- <md-button class="md-raised" layout="row" layout-align="center center">Comments ({{getCommentsCount()}})</md-button> -->
+ <md-button class="md-raised" layout="row" layout-align="start center">Comments ({{getCommentsCount()}})</md-button> 
   <md-list-item ng-repeat="comment in $ctrl.comments" class="md-3-line">
     <div class="md-list-item-text" layout="column">
-      <h2>{{$ctrl.comment.date}}
+      <h2>{{$ctrl.comment.date}}</h2>
       <p>{{$ctrl.comment.text}}</p>
       <p>{{$ctrl.comment.name}}</p>
     </div>
