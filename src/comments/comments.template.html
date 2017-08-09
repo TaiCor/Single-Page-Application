@@ -1,7 +1,9 @@
-<md-button class="md-raised" layout="row" layout-align="center center">Comments ({{getCommentsCount()}})</md-button>
-  <md-list-item ng-repeat="comment in post.comment" class="md-2-line">
+<!-- <md-button class="md-raised" layout="row" layout-align="center center">Comments ({{getCommentsCount()}})</md-button> -->
+  <md-list-item ng-repeat="comment in post.comment" class="md-3-line">
     <div class="md-list-item-text" layout="column">
+      <h2>{{$ctrl.user}}
       <p>{{$ctrl.text}}</p>
-      <cite class="clearfix">— {{$ctrl.author}}</cite>
+      <p>{{$ctrl.name}}</p>
+      <p class="md-subheader" layout="row" layout-align="end">picture id: #{{$ctrl.userid}}</p>
     </div>
-</md-list-item>
+  </md-list-item>

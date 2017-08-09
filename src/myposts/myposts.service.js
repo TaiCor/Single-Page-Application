@@ -1,4 +1,4 @@
-import myPosts from './userposts.json'
+import myPosts from '../jsons/userposts'
 
 export default class myPostService {
   constructor ($http, $q) {
