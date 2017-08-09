@@ -1,4 +1,5 @@
 import angular from 'angular'
+import './style.css'
 import 'angular-material'
 import 'angular-material/angular-material.min.css'
 import post from './post/post.component'
