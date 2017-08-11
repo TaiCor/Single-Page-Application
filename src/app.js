@@ -9,6 +9,7 @@ import servicePost from './posts/posts.service'
 import serviceMyPost from './myposts/myposts.service'
 import 'angular-ui-router'
 import route from './route.config'
+import serviceComments from './comments/comments.service'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router'])
   .component('posts', posts)
@@ -16,4 +17,5 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router'])
   .component('myPosts', myPosts)
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)
+  .service('serviceComments', serviceComments)
   .config(route)

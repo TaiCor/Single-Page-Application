@@ -1,8 +1,9 @@
 export default class commentsService {
   constructor ($http) {
-    this.$http = this.$http
+    this.$http = $http
   }
   getComments (postId) {
-    return this.$http.get('jsons/comments/comments' + postId + '.json')
+    let comments = this.$http.get('jsons/comments/comments' + postId + '.json')
+    return comments
   }
 }

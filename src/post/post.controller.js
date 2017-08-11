@@ -1,4 +1,8 @@
 export default class postController {
+  constructor (serviceComments) {
+    this.serviceComments = serviceComments
+  }
+
   $onInit () {
     this.id = this.post.id
     this.url = this.post.url
@@ -7,4 +11,6 @@ export default class postController {
     this.user = this.post.user
     this.date = this.post.date
   }
+
+  getComments () { this.serviceComments.getComments(this.id).then(comments => { this.comments = comments }) }
 }
