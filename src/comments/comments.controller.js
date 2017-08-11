@@ -1,8 +1,10 @@
 export default class commentsController {
-  $onInit () {
-    this.comments = this.comments
-  }
+  // $onInit () {
+  //   this.date = this.comment.date
+  //   this.text = this.comment.text
+  //   this.user = this.comment.user
+  // }
   getCommentsCount () {
-    return (this.comments.lenth)
+    return (this.comments.length)
   }
 }

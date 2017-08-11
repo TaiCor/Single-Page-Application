@@ -3,7 +3,7 @@ export default class commentsService {
     this.$http = $http
   }
   getComments (postId) {
-    let comments = this.$http.get('jsons/comments/comments' + postId + '.json')
-    return comments
+    return this.$http.get('src/jsons/comments/comments' + postId + '.json')
+      .then(resp => resp.data)
   }
 }

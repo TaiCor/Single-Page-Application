@@ -10,6 +10,7 @@ export default class postController {
     this.description = this.post.description
     this.user = this.post.user
     this.date = this.post.date
+    this.comments = this.getComments()
   }
 
   getComments () { this.serviceComments.getComments(this.id).then(comments => { this.comments = comments }) }
