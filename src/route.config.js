@@ -10,6 +10,11 @@ export default function routes ($stateProvider, $urlRouterProvider) {
       url: '/myposts',
       component: 'myPosts'
     })
+  $stateProvider
+    .state('singin', {
+      url: '/singin',
+      component: 'singin'
+    })
   $urlRouterProvider
     .otherwise('/allposts')
 }

@@ -11,12 +11,14 @@ import 'angular-ui-router'
 import route from './route.config'
 import serviceComments from './comments/comments.service'
 import comments from './comments/comments.component'
+import singin from './singin/singin.component'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router'])
   .component('posts', posts)
   .component('post', post)
   .component('myPosts', myPosts)
   .component('comments', comments)
+  .component('singin', singin)
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)
   .service('serviceComments', serviceComments)
