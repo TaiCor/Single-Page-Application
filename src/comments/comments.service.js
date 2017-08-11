@@ -1,11 +1,8 @@
-import comments from '../jsons/comments'
-
 export default class commentsService {
-  constructor ($q, $http) {
-    this.$q = this.$q
-    this.$http = this.http
+  constructor ($http) {
+    this.$http = this.$http
   }
-  getComments () {
-    return this.$q.when(comments)
+  getComments (postId) {
+    return this.$http.get('jsons/comments/comments' + postId + '.json')
   }
 }
