@@ -1,5 +1,5 @@
-import template from './singin.template.html'
-import controller from './singin.controller'
+import template from './login.template.html'
+import controller from './login.controller'
 
 export default {
   template,

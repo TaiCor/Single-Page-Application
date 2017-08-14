@@ -11,9 +11,14 @@ export default function routes ($stateProvider, $urlRouterProvider) {
       component: 'myPosts'
     })
   $stateProvider
-    .state('singin', {
-      url: '/singin',
-      component: 'singin'
+    .state('login', {
+      url: '/login',
+      component: 'login'
+    })
+  $stateProvider
+    .state('singup', {
+      url: '/singup',
+      component: 'singup'
     })
   $urlRouterProvider
     .otherwise('/allposts')
