@@ -4,5 +4,6 @@
 </md-radio-group>
 <h1 class="md-display-2" layout="row" layout-align="center">My Posts</h1>
 <div class="column">
+  <newpost></newpost>
   <post post="post" ng-repeat="post in $ctrl.myPosts | orderBy: query"></post>
 </div>
