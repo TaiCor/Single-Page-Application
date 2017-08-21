@@ -9,6 +9,7 @@ import posts from './posts/posts.component'
 import myPosts from './myposts/myposts.component'
 import servicePost from './posts/posts.service'
 import serviceMyPost from './myposts/myposts.service'
+import serviceSingup from './singup/singup.service'
 import route from './route.config'
 import serviceComments from './comments/comments.service'
 import comments from './comments/comments.component'
@@ -29,4 +30,5 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)
   .service('serviceComments', serviceComments)
+  .service('serviceSingup', serviceSingup)
   .config(route)
