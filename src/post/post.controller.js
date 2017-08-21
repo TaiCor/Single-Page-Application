@@ -8,8 +8,8 @@ export default class postController {
     this.url = this.post.url
     this.title = this.post.title
     this.description = this.post.description
-    this.user = this.post.user
-    this.date = this.post.date
+    this.user = this.post.author_name
+    this.date = this.post.created
     this.comments = this.getComments()
   }
 

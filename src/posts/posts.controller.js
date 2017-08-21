@@ -3,7 +3,7 @@ export default class controllerPhotos {
     this.servicePost = servicePost
     servicePost.getPosts()
       .then(posts => {
-        this.posts = posts
+        this.posts = posts.data
       })
   }
 }

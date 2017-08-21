@@ -1,4 +1,4 @@
-import posts from '../jsons/data.json'
+// import posts from '../jsons/data.json'
 
 export default class postsService {
   constructor ($http, $q) {
@@ -6,6 +6,6 @@ export default class postsService {
     this.$q = $q
   }
   getPosts () {
-    return this.$q.when(posts)
+    return this.$http.get('http://localhost:3000/getAllPhotos')
   }
 }
