@@ -8,6 +8,6 @@ export default class singupController {
   }
   singup () {
     this.serviceSingup.singup(this.login, this.password, this.name)
-    .then(this.$location.path('/'))
+    .then(this.$location.path('/allpost'))
   }
 }
