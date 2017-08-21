@@ -15,6 +15,7 @@ import comments from './comments/comments.component'
 import login from './login/login.component'
 import singup from './singup/singup.component'
 import newpost from './newpost/newpost.component'
+import addcomments from './addcomments/addcomments.component'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .component('posts', posts)
@@ -24,6 +25,7 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .component('login', login)
   .component('singup', singup)
   .component('newpost', newpost)
+  .component('addcomments', addcomments)
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)
   .service('serviceComments', serviceComments)

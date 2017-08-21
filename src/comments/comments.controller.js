@@ -1,5 +1,5 @@
 export default class commentsController {
-  getCommentsCount () {
-    return (this.comments.length)
-  }
+  // getCommentsCount () {
+  //   return (this.comments.length)
+  // }
 }
