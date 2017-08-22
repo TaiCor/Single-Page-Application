@@ -1,11 +1,8 @@
-import myPosts from '../jsons/userposts'
-
 export default class myPostService {
-  constructor ($http, $q) {
+  constructor ($http) {
     this.$http = $http
-    this.$q = $q
   }
   getMyPosts () {
-    return this.$q.when(myPosts)
+    return this.$http.get('http://localhost:3000/getUserPhotos')
   }
 }

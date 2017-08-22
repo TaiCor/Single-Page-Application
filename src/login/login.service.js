@@ -3,6 +3,6 @@ export default class loginService {
     this.$http = $http
   }
   login (data) {
-    this.$http.post('http://localhost:3000/login', data)
+    return this.$http.post('http://localhost:3000/login', data)
   }
 }

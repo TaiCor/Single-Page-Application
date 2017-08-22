@@ -1,15 +1,17 @@
-<div layout="column" flex="40" flex-offset="30">
-  <h1 class="md-head-line">Sing in</h1>
-<md-input-container class="forms">
-    <label>Login</label>
-    <input required minlength="3" ng-model="$ctrl.data.login">
-  </md-input-container>
-  <md-input-container>
-    <label>Password</label>
-    <input type="password" minlength="3" required ng-model="$ctrl.data.password">
-  </md-input-container>
-  <md-input-container>
-    <md-button layout-align="center end" class="md-raised" type='submit' ng-click="$ctrl.login()">Submit</md-button>
-  </md-input-container>
-</div>
+<form enctype="application/x-www-form-urlencoded">
+  <div layout="column" flex="40" flex-offset="30">
+    <h1 class="md-head-line">Sing in</h1>
+  <md-input-container class="forms">
+      <label>Login</label>
+      <input required minlength="3" ng-model="$ctrl.data.login">
+    </md-input-container>
+    <md-input-container>
+      <label>Password</label>
+      <input type="password" minlength="3" required ng-model="$ctrl.data.password">
+    </md-input-container>
+    <md-input-container>
+      <md-button layout-align="center end" class="md-raised" type='submit' ng-click="$ctrl.login()">Submit</md-button>
+    </md-input-container>
+  </div>
+</form>
 
