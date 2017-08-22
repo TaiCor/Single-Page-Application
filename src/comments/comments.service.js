@@ -3,6 +3,6 @@ export default class commentsService {
     this.$http = $http
   }
   getComments (postId) {
-    return this.$http.post('http://localhost:3000/getCommentsByPhotoId', { postId })
+    return this.$http.post('http://localhost:3000/getCommentsByPhotoId', { postId }, { withCredentials: true })
   }
 }

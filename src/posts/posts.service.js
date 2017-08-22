@@ -1,5 +1,3 @@
-// import posts from '../jsons/data.json'
-
 export default class postsService {
   constructor ($http, $q) {
     this.$http = $http
