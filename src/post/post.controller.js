@@ -4,16 +4,11 @@ export default class postController {
   }
 
   $onInit () {
-    this.id = this.post.id
-    this.title = this.post.title
-    this.description = this.post.description
-    this.user = this.post.author_name
-    this.date = this.post.created
     this.getComments()
   }
 
   getComments () {
-    this.serviceComments.getComments(this.id)
+    this.serviceComments.getComments(this.post.id)
       .then(comments => {
         console.log(comments)
         this.comments = comments.data

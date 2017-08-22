@@ -6,4 +6,4 @@
     <p>{{comment.commented | date:'yyyy-MM-dd HH:mm'}}</p>
   </div>
 </md-list-item>
-<addcomments ng-show="$ctrl.showComments"></addcomments>
+<addcomments ng-show="$ctrl.showComments" postId='$ctrl.id'></addcomments>
