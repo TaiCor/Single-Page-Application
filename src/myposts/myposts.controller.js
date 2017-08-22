@@ -3,7 +3,7 @@ export default class myPostController {
     this.serviceMyPost = serviceMyPost
     serviceMyPost.getMyPosts()
       .then(myPosts => {
-        this.myPosts = myPosts
+        this.myPosts = myPosts.data
       })
   }
 }

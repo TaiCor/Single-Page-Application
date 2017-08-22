@@ -3,6 +3,6 @@ export default class myPostService {
     this.$http = $http
   }
   getMyPosts () {
-    return this.$http.get('http://localhost:3000/getUserPhotos')
+    return this.$http.get('http://localhost:3000/getUserPhotos', { withCredentials: true })
   }
 }

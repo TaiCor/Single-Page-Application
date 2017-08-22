@@ -5,6 +5,7 @@ export default class loginController {
     this.$location = $location
   }
   login () {
-    this.serviceLogin.login(this.data).then(this.$location.path('/allpost'))
+    this.serviceLogin.login(this.data)
+      .then(() => this.$location.path('/allpost'))
   }
 }
