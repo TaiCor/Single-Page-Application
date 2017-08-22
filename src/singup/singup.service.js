@@ -2,7 +2,7 @@ export default class singupService {
   constructor ($http) {
     this.$http = $http
   }
-  singup (login, password, name) {
-    return this.$http.get(`http://localhost:3000/register/${login}/${password}/${name}`)
+  singup (data) {
+    return this.$http.post(`http://localhost:3000/register/`, data)
   }
 }

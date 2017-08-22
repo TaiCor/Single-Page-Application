@@ -2,11 +2,11 @@
   <h1 class="md-head-line">Sing in</h1>
 <md-input-container class="forms">
     <label>Login</label>
-    <input required minlength="3" ng-model="$ctrl.login">
+    <input required minlength="3" ng-model="$ctrl.data.login">
   </md-input-container>
   <md-input-container>
     <label>Password</label>
-    <input type="password" minlength="3" required ng-model="$ctrl.password">
+    <input type="password" minlength="3" required ng-model="$ctrl.data.password">
   </md-input-container>
   <md-input-container>
     <md-button layout-align="center end" class="md-raised" type='submit' ng-click="$ctrl.login()">Submit</md-button>

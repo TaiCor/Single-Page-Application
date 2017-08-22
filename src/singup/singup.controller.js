@@ -2,12 +2,10 @@ export default class singupController {
   constructor (serviceSingup, $location) {
     this.serviceSingup = serviceSingup
     this.$location = $location
-    this.login = ''
-    this.name = ''
-    this.password = ''
+    this.data = {}
   }
   singup () {
-    this.serviceSingup.singup(this.login, this.password, this.name)
+    this.serviceSingup.singup(this.data)
     .then(this.$location.path('/allpost'))
   }
 }
