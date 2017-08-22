@@ -7,6 +7,6 @@
       <p class="md-title">Downloaded: {{$ctrl.post.created | date:'yyyy-MM-dd HH:mm'}}</p>
       <p class="md-title" >Added by <a href="#">{{$ctrl.post.author_name}}</a></p>
       <p>picture id: #{{$ctrl.post.id}}</p>  
-      <comments comments="$ctrl.comments"></comments>
+      <comments comments="$ctrl.comments" postid="$ctrl.post.id"></comments>
     </div>
   </md-card>

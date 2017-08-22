@@ -4,6 +4,7 @@ export default class postController {
   }
 
   $onInit () {
+    this.id = this.post.id
     this.getComments()
   }
 
