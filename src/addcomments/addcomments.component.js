@@ -4,7 +4,7 @@ import controller from './addcomments.controller'
 export default {
   bindings: {
     postid: '=',
-    addcomments: '&'
+    addcomment: '&'
   },
   template,
   controller

@@ -9,6 +9,6 @@
       <p>picture id: #{{$ctrl.post.id}}</p>  
       <md-button class="md-raised" layout="row" layout-align="start center" ng-click="showComments = ! showComments">Comments ({{$ctrl.length}})</md-button>
       <comments ng-show="showComments" comments="$ctrl.comments"></comments>
-      <addcomments ng-show="showComments" postid='$ctrl.postid'></addcomments>
+      <addcomments ng-show="showComments" postid='$ctrl.post.id' addcomment="$ctrl.addComment(post, comment)"></addcomments>
     </div>
   </md-card>

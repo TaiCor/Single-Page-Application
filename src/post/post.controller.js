@@ -1,10 +1,10 @@
 export default class postController {
-  constructor (serviceComments) {
+  constructor (serviceComments, serviceAddcomments) {
     this.serviceComments = serviceComments
+    this.serviceAddcomments = serviceAddcomments
   }
 
   $onInit () {
-    this.id = this.post.id
     this.getComments()
   }
 
@@ -14,5 +14,20 @@ export default class postController {
         this.comments = comments.data
         this.length = comments.data.length
       })
+  }
+
+  addComment (post, comment) {
+    this.comment = comment
+    this.serviceAddcomments.addComment(post, comment)
+    .then((res) => {
+      this.author_name = res.data.author_name
+      this.commented = res.data.commented
+      this.data = {
+        'author_name': this.author_name,
+        'comment': this.comment,
+        'commented': this.commented
+      }
+      this.comments.push(this.data)
+    })
   }
 }
