@@ -7,6 +7,8 @@
       <p class="md-title">Downloaded: {{$ctrl.post.created | date:'yyyy-MM-dd HH:mm'}}</p>
       <p class="md-title" >Added by <a href="#">{{$ctrl.post.author_name}}</a></p>
       <p>picture id: #{{$ctrl.post.id}}</p>  
-      <comments comments="$ctrl.comments" postid="$ctrl.post.id"></comments>
+      <md-button class="md-raised" layout="row" layout-align="start center" ng-click="showComments = ! showComments">Comments ({{$ctrl.length}})</md-button>
+      <comments ng-show="showComments" comments="$ctrl.comments"></comments>
+      <addcomments ng-show="showComments" postid='$ctrl.postid'></addcomments>
     </div>
   </md-card>

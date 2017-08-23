@@ -3,8 +3,7 @@ import template from './comments.template.html'
 
 export default {
   bindings: {
-    comments: '=',
-    postid: '='
+    comments: '='
   },
   template,
   controller

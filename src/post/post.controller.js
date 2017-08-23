@@ -11,8 +11,8 @@ export default class postController {
   getComments () {
     this.serviceComments.getComments(this.post.id)
       .then(comments => {
-        console.log(comments)
         this.comments = comments.data
+        this.length = comments.data.length
       })
   }
 }

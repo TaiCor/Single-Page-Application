@@ -3,7 +3,8 @@ import controller from './addcomments.controller'
 
 export default {
   bindings: {
-    postId: '='
+    postid: '=',
+    addcomments: '&'
   },
   template,
   controller
