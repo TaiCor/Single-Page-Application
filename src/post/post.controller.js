@@ -19,15 +19,17 @@ export default class postController {
   addComment (post, comment) {
     this.comment = comment
     this.serviceAddcomments.addComment(post, comment)
-    .then((res) => {
-      this.author_name = res.data.author_name
-      this.commented = res.data.commented
-      this.data = {
-        'author_name': this.author_name,
-        'comment': this.comment,
-        'commented': this.commented
-      }
-      this.comments.push(this.data)
-    })
+      .then(res => {
+        this.author_name = res.data['0'].author_name
+        this.commented = res.data['0'].commented
+        console.log(this.author_name)
+        console.log(this.commented)
+        this.data = {
+          'author_name': this.author_name,
+          'comment': this.comment,
+          'commented': this.commented
+        }
+        this.comments.push(this.data)
+      })
   }
 }

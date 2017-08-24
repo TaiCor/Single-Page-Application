@@ -3,6 +3,6 @@ export default class addcommentsService {
     this.$http = $http
   }
   addComment (photoId, comment) {
-    this.$http.post('http://localhost:3000/addComment', {photoId, comment}, { withCredentials: true })
+    return this.$http.post('http://localhost:3000/addComment', {photoId, comment}, { withCredentials: true })
   }
 }

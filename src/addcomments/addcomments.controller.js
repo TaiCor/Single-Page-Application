@@ -3,7 +3,8 @@ export default class addcommentsController {
     this.serviceAddcomments = serviceAddcomments
     this.comment = ''
   }
-  // addComment () {
-  //   this.serviceAddcomments.addComment(this.postid, this.comment)
-  // }
+  addComment () {
+    this.addcomment({post: this.postid, comment: this.comment})
+    this.comment = ''
+  }
 }

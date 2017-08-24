@@ -19,6 +19,7 @@ import newpost from './newpost/newpost.component'
 import addcomments from './addcomments/addcomments.component'
 import serviceLogin from './services/login.service'
 import serviceAddcomments from './services/addcomments.service'
+import serviceDeleteComment from './services/deletecomment.service'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .component('posts', posts)
@@ -35,4 +36,8 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .service('serviceSingup', serviceSingup)
   .service('serviceLogin', serviceLogin)
   .service('serviceAddcomments', serviceAddcomments)
+  .service('serviceDeleteComment', serviceDeleteComment)
   .config(route)
+  // .run(['serviceLogin', (serviceLogin) => {
+  //   console.log(serviceLogin)
+  // }])
