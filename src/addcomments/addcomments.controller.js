@@ -4,7 +4,9 @@ export default class addcommentsController {
     this.comment = ''
   }
   addComment () {
-    this.addcomment({post: this.postid, comment: this.comment})
-    this.comment = ''
+    if (this.comment !== '') {
+      this.addcomment({post: this.postid, comment: this.comment})
+      this.comment = ''
+    }
   }
 }

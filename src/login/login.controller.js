@@ -1,11 +1,23 @@
 export default class loginController {
-  constructor (serviceLogin, $location) {
+  constructor (serviceLogin, $location, $mdToast) {
     this.serviceLogin = serviceLogin
     this.data = {}
     this.$location = $location
+    this.$mdToast = $mdToast
   }
   login () {
     this.serviceLogin.login(this.data)
-      .then(() => this.$location.path('/allpost'))
+      .then(res => {
+        if (res.data !== false) {
+          this.$location.path('/allpost')
+        } else {
+          this.$mdToast.show(
+            this.$mdToast.simple()
+            .textContent('Invalid login or password')
+            .position('top right')
+            .hideDelay(3000)
+          )
+        }
+      })
   }
 }
