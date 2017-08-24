@@ -20,6 +20,7 @@ import addcomments from './addcomments/addcomments.component'
 import serviceLogin from './services/login.service'
 import serviceAddcomments from './services/addcomments.service'
 import serviceDeleteComment from './services/deletecomment.service'
+import serviceGetCurrentUser from './services/getcurrentUser.service'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .component('posts', posts)
@@ -37,7 +38,8 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .service('serviceLogin', serviceLogin)
   .service('serviceAddcomments', serviceAddcomments)
   .service('serviceDeleteComment', serviceDeleteComment)
+  .service('serviceGetCurrentUser', serviceGetCurrentUser)
   .config(route)
-  // .run(['serviceLogin', (serviceLogin) => {
-  //   console.log(serviceLogin)
-  // }])
+  .run(['serviceGetCurrentUser', (serviceGetCurrentUser) => {
+    console.log(serviceGetCurrentUser.getcurrentUser())
+  }])

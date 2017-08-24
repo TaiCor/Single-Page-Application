@@ -7,6 +7,11 @@ export default class getcurrentUser {
   getcurrentUser () {
     return this.$http.get('http://localhost:3000/getCurrentUser', { withCredentials: true })
     .then(response => {
+      if (response.data.id !== 0) {
+        this.notAuth = false
+        this.login = true
+        this.user = response.data
+      }
     })
   }
 }
