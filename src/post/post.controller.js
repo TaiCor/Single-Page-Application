@@ -30,6 +30,7 @@ export default class postController {
           'commented': this.commented
         }
         this.comments.push(this.data)
+        this.length += 1
       })
   }
 }
