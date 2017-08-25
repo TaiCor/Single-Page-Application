@@ -1,6 +1,6 @@
 <md-toolbar layout="row" layout-align='start center'>
   <md-button class='md-raised' ui-sref='allposts'>All Posts</md-button>
-  <md-button ng-disabled="{{$ctrl.serviceGetCurrentUser.user.login}}" class='md-raised' ui-sref='myposts'>My Posts</md-button>
+  <md-button ng-disabled="{{$ctrl.serviceGetCurrentUser.login}}" class='md-raised' ui-sref='myposts'>My Posts</md-button>
   <span flex></span>
   <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id === 0' class='md-raised' ui-sref='login'>Log in</md-button>
   <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id === 0' class='md-raised' ui-sref='singup'>sing up</md-button>
