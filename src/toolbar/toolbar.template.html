@@ -1,9 +1,12 @@
 <md-toolbar layout="row" layout-align='start center'>
   <md-button class='md-raised' ui-sref='allposts'>All Posts</md-button>
-  <md-button class='md-raised' ui-sref='myposts'>My Posts</md-button>
+  <md-button ng-disabled="{{$ctrl.serviceGetCurrentUser.user.login}}" class='md-raised' ui-sref='myposts'>My Posts</md-button>
   <span flex></span>
-  <md-button  class='md-raised' ui-sref='login'>Log in {{$ctrl.serviceGetCurrentUser.login}}</md-button>
-  <md-button ng-if='$ctrl.serviceGetCurrentUser.login' class='md-raised' ui-sref='singup'>sing up</md-button>
-  <span></span>
+  <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id === 0' class='md-raised' ui-sref='login'>Log in</md-button>
+  <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id === 0' class='md-raised' ui-sref='singup'>sing up</md-button>
+  <span ng-if='$ctrl.serviceGetCurrentUser.user.id !== 0' class="md-display-1" layout-margin>{{$ctrl.serviceGetCurrentUser.user.name}}</span>
+  <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id !== 0' class="md-fab md-raised" ng-click="$ctrl.logoutUser()">
+    <ng-md-icon icon="logout" style="fill: black" size="24px"></ng-md-icon> 
+  </md-button>
 </md-toolbar>
 <ui-view></ui-view>

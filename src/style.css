@@ -17,3 +17,9 @@ md-radio-group{
 .addcomment{
     margin-right: 20% 
 }
+ng-md-icon {
+    fill: currentColor;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1;
+  }

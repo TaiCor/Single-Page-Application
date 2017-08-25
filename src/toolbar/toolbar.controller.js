@@ -1,5 +1,15 @@
 export default class toolbarController {
-  constructor (serviceGetCurrentUser) {
+  constructor (serviceGetCurrentUser, serviceLogout, $location) {
     this.serviceGetCurrentUser = serviceGetCurrentUser
+    this.serviceLogout = serviceLogout
+    this.$location = $location
+  }
+  logoutUser () {
+    this.serviceLogout.logout()
+    .then(
+    (res) => {
+      this.session = res.data
+      console.log(this.session.id)
+    })
   }
 }

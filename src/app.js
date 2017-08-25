@@ -4,6 +4,7 @@ import 'ng-file-upload'
 import './style.css'
 import 'angular-material'
 import 'angular-material/angular-material.min.css'
+import 'angular-material-icons'
 import post from './post/post.component'
 import posts from './posts/posts.component'
 import myPosts from './myposts/myposts.component'
@@ -22,8 +23,9 @@ import serviceAddcomments from './services/addcomments.service'
 import serviceDeleteComment from './services/deletecomment.service'
 import serviceGetCurrentUser from './services/getcurrentUser.service'
 import toolbar from './toolbar/toolbar.component'
+import serviceLogout from './services/logout.service'
 
-angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
+angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons'])
   .component('posts', posts)
   .component('post', post)
   .component('myPosts', myPosts)
@@ -41,6 +43,7 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .service('serviceAddcomments', serviceAddcomments)
   .service('serviceDeleteComment', serviceDeleteComment)
   .service('serviceGetCurrentUser', serviceGetCurrentUser)
+  .service('serviceLogout', serviceLogout)
   .config(route)
   .run(['serviceGetCurrentUser', (serviceGetCurrentUser) => {
     serviceGetCurrentUser.getcurrentUser()
