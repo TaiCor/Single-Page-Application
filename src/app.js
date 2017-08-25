@@ -21,6 +21,7 @@ import serviceLogin from './services/login.service'
 import serviceAddcomments from './services/addcomments.service'
 import serviceDeleteComment from './services/deletecomment.service'
 import serviceGetCurrentUser from './services/getcurrentUser.service'
+import toolbar from './toolbar/toolbar.component'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .component('posts', posts)
@@ -31,6 +32,7 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .component('singup', singup)
   .component('newpost', newpost)
   .component('addcomments', addcomments)
+  .component('toolbar', toolbar)
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)
   .service('serviceComments', serviceComments)
@@ -41,5 +43,6 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload'])
   .service('serviceGetCurrentUser', serviceGetCurrentUser)
   .config(route)
   .run(['serviceGetCurrentUser', (serviceGetCurrentUser) => {
-    console.log(serviceGetCurrentUser.getcurrentUser())
-  }])
+    serviceGetCurrentUser.getcurrentUser()
+  }]
+)

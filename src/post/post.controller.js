@@ -22,8 +22,6 @@ export default class postController {
       .then(res => {
         this.author_name = res.data['0'].author_name
         this.commented = res.data['0'].commented
-        console.log(this.author_name)
-        console.log(this.commented)
         this.data = {
           'author_name': this.author_name,
           'comment': this.comment,

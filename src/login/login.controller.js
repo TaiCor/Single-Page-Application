@@ -1,5 +1,6 @@
 export default class loginController {
-  constructor (serviceLogin, $location, $mdToast) {
+  constructor (serviceLogin, $location, $mdToast, serviceGetCurrentUser) {
+    this.serviceGetCurrentUser = serviceGetCurrentUser
     this.serviceLogin = serviceLogin
     this.data = {}
     this.$location = $location
