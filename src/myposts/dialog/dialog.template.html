@@ -1,0 +1,28 @@
+<md-dialog class="size">
+  <md-dialog-content>
+    <div class='md-dialog-content'>
+      <form layout="column" ng-model="MyForm">
+          <md-input-container>
+            <label>Title</label>
+            <input required minlength="1" ng-model='$ctrl.data.title'></input>
+          </md-input-container>
+          <md-input-container>
+            <label>Description</label>
+            <textarea required minlength="1" rows="2" maxlength="255" required md-select-on-focus ng-model='$ctrl.data.description'></textarea>
+          </md-input-container>
+          <div layout="row">  
+          <input accept="image/*" name="file" class="" ngf-select="" ng-model="$ctrl.picFile" id="input-file-id"  type="file" style="display:none"/>
+          <label for="input-file-id" class="md-button md-raised md-primary" ng-show="!$ctrl.picFile">Choose Files</label></div>
+          <img ng-show="myForm.file.$valid" ngf-thumbnail="!$ctrl.picFile.$error && $ctrl.picFile" class="thumb"></img>
+          <div class="confirm">
+          <md-button type="submit" class="md-raised md-primary" aria-label="Done" ng-if="$ctrl.picFile" ng-click="$ctrl.addPost()">
+              Done!
+          </md-button>
+          <md-button class="md-raised md-warn" aria-label="reset" ng-if="$ctrl.picFile" ng-click="$ctrl.picFile = null">
+              Reset
+          </md-button>
+          </div>       
+        </form>
+      </div>  
+  </md-dialog-content>
+</md-dialog>

@@ -1,9 +1,13 @@
 <md-radio-group layout="row" ng-model="query">
   <md-radio-button value="title" class="md-primary">Alphabetical</md-radio-button>
-  <md-radio-button value="-date" class="md-primary">New first</md-radio-button>
+  <md-radio-button value="date" class="md-primary">New first</md-radio-button>
 </md-radio-group>
 <h1 class="md-display-2" layout="row" layout-align="center">My Posts</h1>
 <div class="column">
-  <newpost></newpost>
-  <post post="post" ng-repeat="post in $ctrl.myPosts | orderBy: query"></post>
+  <div layout="row" layout-align="center center">
+    <md-button class="md-fab ng-md-icon" aria-label="add post" ng-click="$ctrl.showDialog($event)">
+      <ng-md-icon icon="add" style="fill: white" size="40px"></ng-md-icon>
+    </md-button>
+  </div>
+  <post post="post" ng-repeat="post in $ctrl.myPosts | orderBy: query: true"></post>
 </div>
