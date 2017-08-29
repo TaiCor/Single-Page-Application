@@ -14,5 +14,6 @@ export default class newPostController {
       fullscreen: true,
       clickOutsideToClose: true
     })
+      .then(res => console.log('res: ', res))
   }
 }

@@ -1,23 +1,29 @@
 export default class dialogController {
-  constructor (Upload, $scope) {
+  constructor (Upload, $scope, $mdDialog) {
     this.Upload = Upload
     $scope.$watch(() => this.picFile, file => console.log(file))
+    this.data = {}
+    this.$mdDialog = $mdDialog
   }
 
   test () {
     console.log('test')
   }
 
-  uploadPic (file, data) {
-    file.upload = this.Upload.upload({
+  uploadPic () {
+    this.Upload.upload({
       method: 'POST',
       url: 'http://localhost:3000/addPost',
-      file: file,
-      data: data
+      withCredentials: true,
+      data: {
+        title: this.data.title,
+        description: this.data.description,
+        file: this.picFile
+      }
     })
     .then(res => {
-      file.result = res.data
-      console.log(file.result)
+      console.log(res.data)
+      this.$mdDialog.hide(res.data)
     })
   }
 }
