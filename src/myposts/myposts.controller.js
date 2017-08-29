@@ -16,7 +16,6 @@ export default class myPostController {
       controllerAs: '$ctrl',
       template,
       targetEvent: event,
-      fullscreen: true,
       clickOutsideToClose: true
     })
     .then((res) => this.myPosts.push(res))
