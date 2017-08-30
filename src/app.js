@@ -16,7 +16,6 @@ import serviceComments from './services/comments.service'
 import comments from './comments/comments.component'
 import login from './login/login.component'
 import singup from './singup/singup.component'
-// import newpost from './newpost/newpost.component'
 import addcomments from './addcomments/addcomments.component'
 import serviceLogin from './services/login.service'
 import serviceAddcomments from './services/addcomments.service'
@@ -25,6 +24,7 @@ import serviceGetCurrentUser from './services/getcurrentUser.service'
 import toolbar from './toolbar/toolbar.component'
 import serviceLogout from './services/logout.service'
 import serviceNewPost from './services/newpost.service'
+import deletecomment from './deletecomment/deletecomment.component'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons'])
   .component('posts', posts)
@@ -33,9 +33,9 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIco
   .component('comments', comments)
   .component('login', login)
   .component('singup', singup)
-  // .component('newpost', newpost)
   .component('addcomments', addcomments)
   .component('toolbar', toolbar)
+  .component('deletecomment', deletecomment)
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)
   .service('serviceComments', serviceComments)

@@ -3,7 +3,8 @@ import template from './comments.template.html'
 
 export default {
   bindings: {
-    comments: '='
+    comments: '=',
+    deleteComment: '&'
   },
   template,
   controller

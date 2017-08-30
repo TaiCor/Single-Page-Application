@@ -22,10 +22,12 @@ export default class postController {
       .then(res => {
         this.author_name = res.data['0'].author_name
         this.commented = res.data['0'].commented
+        this.comment_id = res.data['0'].comment_id
         this.data = {
           'author_name': this.author_name,
           'comment': this.comment,
-          'commented': this.commented
+          'commented': this.commented,
+          'id': this.comment_id
         }
         this.comments.push(this.data)
         this.length += 1

@@ -5,5 +5,8 @@
         <p>{{comment.comment}}</p>
         <p>{{comment.commented | date:'yyyy-MM-dd HH:mm'}}</p>
       </div>
-    </md-list-item>
+      <md-button aria-label="button-label" class="md-icon-button" ng-click='$ctrl.delete()'>
+        <ng-md-icon icon="delete" style="fill: black" size="20"></ng-md-icon>
+     </md-button>    
+  </md-list-item>
 </md-list>

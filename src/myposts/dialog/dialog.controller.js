@@ -12,4 +12,11 @@ export default class dialogController {
       this.$mdDialog.hide(res.data)
     })
   }
+  checkInput () {
+    console.log(this.data.title)
+    console.log(this.data.description)
+    if (this.data.title === undefined && this.data.description === undefined) {
+      return true
+    } else { return false }
+  }
 }
