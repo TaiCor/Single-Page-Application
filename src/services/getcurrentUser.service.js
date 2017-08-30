@@ -2,7 +2,6 @@ export default class getcurrentUser {
   constructor ($q, $http) {
     this.$q = $q
     this.$http = $http
-
     this.notAuth = true
     this.login = false
   }
@@ -18,14 +17,18 @@ export default class getcurrentUser {
       })
   }
 
-  getcurrentUser () {
+  setCurrentUser (response) {
+    if (response.id !== 0) {
+      this.notAuth = false
+      this.login = true
+      this.user = response.data
+    }
+  }
+
+  getCurrentUser () {
     this.fetchCurrentUser()
-    .then(response => {
-      if (response.id !== 0) {
-        this.notAuth = false
-        this.login = true
-        this.user = response.data
-      }
-    })
+      .then((res) => {
+        this.setCurrentUser(res)
+      })
   }
 }

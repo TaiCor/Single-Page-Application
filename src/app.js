@@ -48,6 +48,6 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIco
   .service('serviceNewPost', serviceNewPost)
   .config(route)
   .run(['serviceGetCurrentUser', (serviceGetCurrentUser) => {
-    serviceGetCurrentUser.getcurrentUser()
+    serviceGetCurrentUser.getCurrentUser()
   }]
 )

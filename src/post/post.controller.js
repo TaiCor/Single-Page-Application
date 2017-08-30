@@ -1,5 +1,6 @@
 export default class postController {
-  constructor (serviceComments, serviceAddcomments) {
+  constructor (serviceComments, serviceAddcomments, serviceDeleteComment) {
+    this.serviceDeleteComment = serviceDeleteComment
     this.serviceComments = serviceComments
     this.serviceAddcomments = serviceAddcomments
   }
@@ -32,5 +33,13 @@ export default class postController {
         this.comments.push(this.data)
         this.length += 1
       })
+  }
+
+  deleteComment (commentId) {
+    this.serviceDeleteComment.deleteComment(commentId)
+    .then(() => {
+      this.comments = this.comments.filter(comments => comments.id !== commentId)
+      this.length -= 1
+    })
   }
 }

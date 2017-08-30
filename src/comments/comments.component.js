@@ -4,7 +4,7 @@ import template from './comments.template.html'
 export default {
   bindings: {
     comments: '=',
-    deleteComment: '&'
+    deletecomment: '&'
   },
   template,
   controller
