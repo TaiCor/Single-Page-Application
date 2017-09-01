@@ -21,7 +21,6 @@
       <p class="md-title" ng-if="$ctrl.checkUpdatePost()">Updated: {{$ctrl.post.updated | date:'yyyy-MM-dd HH:mm'}}</p>
       <p class="md-title" >Added by <a href="#">{{$ctrl.post.author_name}}</a></p>
       <p>picture id: #{{$ctrl.post.id}}</p>
-      <myrating></myrating>
       <md-card-actions layout="row" layout-align="start center">
         <md-button class="md-raised" ng-click="showComments = ! showComments">Comments ({{$ctrl.length}}) 
           <ng-md-icon icon="mode_comment" style="fill: gray" size="20"></ng-md-icon>

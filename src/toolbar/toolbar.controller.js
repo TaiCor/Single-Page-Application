@@ -8,6 +8,7 @@ export default class toolbarController {
     this.serviceLogout.logout()
     .then(
     (res) => {
+      this.$location.path('/allpost')
       this.serviceGetCurrentUser.setCurrentUser(res)
       this.session = res.data
       console.log(this.session.id)
