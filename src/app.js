@@ -5,7 +5,6 @@ import './style.css'
 import 'angular-material'
 import 'angular-material/angular-material.min.css'
 import 'angular-material-icons'
-import 'angular1-star-rating'
 import post from './post/post.component'
 import posts from './posts/posts.component'
 import myPosts from './myposts/myposts.component'
@@ -30,7 +29,6 @@ import serviceEditComment from './services/editcomment.service'
 import serviceEditPost from './services/editpost.service'
 import allpost from './allpost/allpost.component'
 import serviceDeletePost from './services/deletepost.service'
-import myrating from './myrating/myrating.component'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons', 'star-rating'])
   .component('posts', posts)
@@ -43,7 +41,6 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIco
   .component('toolbar', toolbar)
   .component('deletecomment', deletecomment)
   .component('allpost', allpost)
-  .component('myrating', myrating)
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)
   .service('serviceComments', serviceComments)
