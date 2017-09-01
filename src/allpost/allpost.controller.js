@@ -1,6 +1,3 @@
-import template from './dialog/dialog.template.html'
-import controller from './dialog/dialog.controller'
-
 export default class postController {
   constructor (serviceComments, serviceAddcomments, serviceDeleteComment, $mdDialog) {
     this.serviceDeleteComment = serviceDeleteComment
@@ -37,33 +34,6 @@ export default class postController {
         this.comments.push(this.data)
         this.length += 1
       })
-  }
-
-  delete () {
-    this.deletepost({postId: this.post.id})
-  }
-  deleteComment (commentId) {
-    this.serviceDeleteComment.deleteComment(commentId)
-    .then(() => {
-      this.comments = this.comments.filter(comments => comments.id !== commentId)
-      this.length -= 1
-    })
-  }
-  editDialog (event, title, description, id) {
-    this.$mdDialog.show({
-      template,
-      controller,
-      controllerAs: '$ctrl',
-      clickOutsideToClose: true,
-      bindToController: true,
-      targetEvent: event,
-      locals: {title, description, id}
-    })
-    .then(res => {
-      this.post.title = res.title
-      this.post.description = res.description
-      this.post.updated = res.updated
-    })
   }
   checkUpdatePost () {
     if (this.post.updated === null) {

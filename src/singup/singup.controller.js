@@ -9,6 +9,7 @@ export default class singupController {
     this.serviceSingup.singup(this.data)
     .then(res => {
       if (res.data !== false) {
+        this.serviceGetCurrentUser.setCurrentUser(res)
         this.$location.path('/allpost')
       } else {
         this.$mdToast.show(
@@ -19,5 +20,12 @@ export default class singupController {
         )
       }
     })
+  }
+  checkInput () {
+    if (this.data.name === undefined || this.data.login === undefined || this.data.password === undefined) {
+      return true
+    } else {
+      return false
+    }
   }
 }

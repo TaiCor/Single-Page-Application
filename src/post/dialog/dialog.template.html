@@ -1,0 +1,19 @@
+<md-dialog>
+  <md-dialog-content class="size">
+    <div class='md-dialog-content'>    
+      <div layout="column">
+        <md-input-container>
+          <label>Edit Title</label>
+          <input type="text" ng-model="$ctrl.title" md-maxlength="255">
+        </md-input-container>
+        <md-input-container>
+          <label>Edit description</label>
+          <textarea minlength="1" rows="2" md-maxlength="255" md-select-on-focus ng-model='$ctrl.description'></textarea>
+        </md-input-container>
+        <div layout="row" layout-align="end center">
+          <md-button class="edit" ng-click="$ctrl.edit()">Edit</md-button>
+        </div>
+      </div>
+    </div>
+  </md-dialog-content>
+</md-dialog>

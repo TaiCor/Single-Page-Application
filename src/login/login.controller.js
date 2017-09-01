@@ -10,6 +10,7 @@ export default class loginController {
     this.serviceLogin.login(this.data)
       .then(res => {
         if (res.data !== false) {
+          this.serviceGetCurrentUser.setCurrentUser(res)
           this.$location.path('/allpost')
         } else {
           this.$mdToast.show(
@@ -20,5 +21,14 @@ export default class loginController {
           )
         }
       })
+  }
+  checkInput () {
+    if (this.data.password === undefined || this.data.login === undefined) {
+      console.log(this.data.password)
+      return true
+    } else {
+      console.log(this.data.password)
+      return false
+    }
   }
 }

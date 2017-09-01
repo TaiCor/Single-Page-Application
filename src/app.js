@@ -25,6 +25,10 @@ import toolbar from './toolbar/toolbar.component'
 import serviceLogout from './services/logout.service'
 import serviceNewPost from './services/newpost.service'
 import deletecomment from './deletecomment/deletecomment.component'
+import serviceEditComment from './services/editcomment.service'
+import serviceEditPost from './services/editpost.service'
+import allpost from './allpost/allpost.component'
+import serviceDeletePost from './services/deletepost.service'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons'])
   .component('posts', posts)
@@ -36,6 +40,7 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIco
   .component('addcomments', addcomments)
   .component('toolbar', toolbar)
   .component('deletecomment', deletecomment)
+  .component('allpost', allpost)
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)
   .service('serviceComments', serviceComments)
@@ -46,6 +51,9 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIco
   .service('serviceGetCurrentUser', serviceGetCurrentUser)
   .service('serviceLogout', serviceLogout)
   .service('serviceNewPost', serviceNewPost)
+  .service('serviceEditComment', serviceEditComment)
+  .service('serviceEditPost', serviceEditPost)
+  .service('serviceDeletePost', serviceDeletePost)
   .config(route)
   .run(['serviceGetCurrentUser', (serviceGetCurrentUser) => {
     serviceGetCurrentUser.getCurrentUser()

@@ -1,21 +1,7 @@
-
-  <md-card flex="50" flex-offset="25" class='.md-whiteframe-6dp'>
+<md-card flex="50" flex-offset="25" class='.md-whiteframe-6dp'>
     <img class="md-card-image" src="{{$ctrl.post.url}}">
     <div layout-padding>
-      <div layout = "row">
-        <h1 class='md-headline'>Title: {{$ctrl.post.title}}</h1>
-        <span flex></span>
-        <md-card-actions>
-          <md-button class="md-raised md-primary" ng-click="$ctrl.editDialog($event, $ctrl.post.title, $ctrl.post.description, $ctrl.post.id)">
-            <ng-md-icon icon="edit" style="fill: white" size="16"></ng-md-icon> 
-            edit
-          </md-button>
-          <md-button class="md-raised md-warn" ng-click="$ctrl.delete()">
-            <ng-md-icon icon="clear" style="fill: white" size="20" ng-click=""></ng-md-icon>
-            delete
-          </md-button>
-        </md-card-actions>
-      </div>
+      <h1 class='md-headline'>Title: {{$ctrl.post.title}}</h1>
       <p class="md-title">Description: {{$ctrl.post.description}}</p>
       <p class="md-title">Downloaded: {{$ctrl.post.created | date:'yyyy-MM-dd HH:mm'}}</p>
       <p class="md-title" ng-if="$ctrl.checkUpdatePost()">Updated: {{$ctrl.post.updated | date:'yyyy-MM-dd HH:mm'}}</p>

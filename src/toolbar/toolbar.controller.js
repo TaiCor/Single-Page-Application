@@ -8,8 +8,16 @@ export default class toolbarController {
     this.serviceLogout.logout()
     .then(
     (res) => {
+      this.serviceGetCurrentUser.setCurrentUser(res)
       this.session = res.data
       console.log(this.session.id)
     })
+  }
+  checkUser () {
+    if (this.serviceGetCurrentUser.login) {
+      return false
+    } else {
+      return true
+    }
   }
 }

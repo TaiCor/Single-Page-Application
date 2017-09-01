@@ -1,5 +1,5 @@
 export default class dialogController {
-  constructor ($scope, $mdDialog, serviceNewPost) {
+  constructor ($mdDialog, serviceNewPost) {
     this.data = {}
     this.$mdDialog = $mdDialog
     this.serviceNewPost = serviceNewPost
@@ -13,9 +13,7 @@ export default class dialogController {
     })
   }
   checkInput () {
-    console.log(this.data.title)
-    console.log(this.data.description)
-    if (this.data.title === undefined && this.data.description === undefined) {
+    if (this.data.title === undefined || this.data.description === undefined) {
       return true
     } else { return false }
   }

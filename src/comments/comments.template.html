@@ -9,7 +9,7 @@
       <md-button aria-label="button-label" class="md-icon-button" ng-click='$ctrl.delete(comment.id)'>
         <ng-md-icon icon="delete" style="fill: black" size="20"></ng-md-icon>
       </md-button>
-      <md-button aria-label="button-label" class="md-icon-button" ng-click='$ctrl.edit(comment.id, comment.body)'>
+      <md-button aria-label="button-label" class="md-icon-button" ng-click='$ctrl.showDialog($event, comment.comment, comment.id)'>
         <ng-md-icon icon="mode_edit" style="fill: black" size="20"></ng-md-icon>
       </md-button>
     </div>

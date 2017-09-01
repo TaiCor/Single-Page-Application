@@ -41,3 +41,7 @@ svg {
 .confirm {
     margin-top: 10px
 }
+
+.md-button.edit {
+    margin-right: 0px
+}

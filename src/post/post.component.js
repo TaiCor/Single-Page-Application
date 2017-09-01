@@ -3,7 +3,8 @@ import controller from './post.controller'
 
 export default {
   bindings: {
-    post: '='
+    post: '=',
+    deletepost: '&'
   },
   template,
   controller

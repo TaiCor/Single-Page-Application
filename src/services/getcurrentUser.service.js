@@ -9,19 +9,20 @@ export default class getcurrentUser {
   fetchCurrentUser () {
     return this.$http.get('http://localhost:3000/getCurrentUser', { withCredentials: true })
       .then(user => {
-        if (user.id === 0) {
-          return this.$q.reject('Wrong token!')
-        } else {
-          return user
-        }
+        return user
       })
   }
 
   setCurrentUser (response) {
-    if (response.id !== 0) {
+    if (response.data.id !== 0) {
       this.notAuth = false
       this.login = true
       this.user = response.data
+    } else {
+      this.notAuth = true
+      this.login = false
+      this.user = response.data
+      return this.user
     }
   }
 
@@ -29,6 +30,8 @@ export default class getcurrentUser {
     this.fetchCurrentUser()
       .then((res) => {
         this.setCurrentUser(res)
+        console.log(this.login)
+        console.log(this.notAuth)
       })
   }
 }
