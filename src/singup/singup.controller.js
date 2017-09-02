@@ -1,5 +1,6 @@
 export default class singupController {
-  constructor (serviceSingup, $location, $mdToast) {
+  constructor (serviceSingup, $location, $mdToast, serviceGetCurrentUser) {
+    this.serviceGetCurrentUser = serviceGetCurrentUser
     this.serviceSingup = serviceSingup
     this.$location = $location
     this.data = {}
