@@ -30,7 +30,7 @@ import serviceEditPost from './services/editpost.service'
 import allpost from './allpost/allpost.component'
 import serviceDeletePost from './services/deletepost.service'
 
-angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons', 'star-rating'])
+angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons'])
   .component('posts', posts)
   .component('post', post)
   .component('myPosts', myPosts)
