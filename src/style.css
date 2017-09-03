@@ -49,3 +49,7 @@ svg {
 md-card-actions.margin-align {
     margin: 0;
 }
+
+md-card-actions.edit {
+    margin-top: 13px;
+}

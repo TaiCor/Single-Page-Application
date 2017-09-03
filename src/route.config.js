@@ -3,7 +3,7 @@ export default function routes ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('allposts', {
       url: '/allposts',
-      component: 'posts'
+      component: 'allposts'
     })
   $stateProvider
     .state('myposts', {
