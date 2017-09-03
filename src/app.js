@@ -5,7 +5,8 @@ import './style.css'
 import 'angular-material'
 import 'angular-material/angular-material.min.css'
 import 'angular-material-icons'
-import post from './post/post.component'
+import 'angular-messages'
+import mypost from '.mypost/mypost.component'
 import posts from './posts/posts.component'
 import myPosts from './myposts/myposts.component'
 import servicePost from './services/posts.service'
@@ -30,9 +31,9 @@ import serviceEditPost from './services/editpost.service'
 import allpost from './allpost/allpost.component'
 import serviceDeletePost from './services/deletepost.service'
 
-angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons'])
+angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons', 'ngMessages'])
   .component('posts', posts)
-  .component('post', post)
+  .component('mypost', mypost)
   .component('myPosts', myPosts)
   .component('comments', comments)
   .component('login', login)

@@ -45,3 +45,7 @@ svg {
 .md-button.edit {
     margin-right: 0px
 }
+
+md-card-actions.margin-align {
+    margin: 0;
+}

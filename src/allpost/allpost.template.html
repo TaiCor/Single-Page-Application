@@ -1,18 +1,21 @@
-<md-card flex="50" flex-offset="25" class='.md-whiteframe-6dp'>
+<md-card flex="40" flex-offset="30" class='.md-whiteframe-6dp'>
+    <md-card-header>
+      <md-card-header-text>
+        <span class="md-title" >{{$ctrl.post.author_name}}</span>
+        <span class="md-subhead">{{$ctrl.post.created | date:'MMM d, y HH:mm'}}</span>
+      </md-card-header-text>
+    </md-card-header>
     <img class="md-card-image" src="{{$ctrl.post.url}}">
-    <div layout-padding>
-      <h1 class='md-headline'>Title: {{$ctrl.post.title}}</h1>
-      <p class="md-title">Description: {{$ctrl.post.description}}</p>
-      <p class="md-title">Downloaded: {{$ctrl.post.created | date:'yyyy-MM-dd HH:mm'}}</p>
-      <p class="md-title" ng-if="$ctrl.checkUpdatePost()">Updated: {{$ctrl.post.updated | date:'yyyy-MM-dd HH:mm'}}</p>
-      <p class="md-title" >Added by <a href="#">{{$ctrl.post.author_name}}</a></p>
-      <p>picture id: #{{$ctrl.post.id}}</p>
-      <md-card-actions layout="row" layout-align="start center">
+    <md-card-content>
+      <h1 class='md-headline'>{{$ctrl.post.title}}</h1>
+      <p>{{$ctrl.post.description}}</p>
+      <p ng-if="$ctrl.checkUpdatePost()">Updated: {{$ctrl.post.updated | date:'yyyy-MM-dd HH:mm'}}</p>
+      <md-card-actions class="margin-align" layout="row" layout-align="start center">
         <md-button class="md-raised" ng-click="showComments = ! showComments">Comments ({{$ctrl.length}}) 
           <ng-md-icon icon="mode_comment" style="fill: gray" size="20"></ng-md-icon>
         </md-button>
       </md-card-actions>
       <comments ng-show="showComments" comments="$ctrl.comments" deletecomment="$ctrl.deleteComment(commentId)"></comments>
       <addcomments ng-show="showComments" postid='$ctrl.post.id' addcomment="$ctrl.addComment(post, comment)"></addcomments>
-    </div>
+    </md-card-content>
   </md-card>

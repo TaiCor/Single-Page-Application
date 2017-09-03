@@ -30,8 +30,6 @@ export default class getcurrentUser {
     this.fetchCurrentUser()
       .then((res) => {
         this.setCurrentUser(res)
-        console.log(this.login)
-        console.log(this.notAuth)
       })
   }
 }

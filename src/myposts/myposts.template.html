@@ -9,5 +9,5 @@
       <ng-md-icon icon="add" style="fill: white" size="20px"></ng-md-icon> Add post
     </md-button>
   </div>
-  <post deletepost="$ctrl.deletePost(postId)" post="post" ng-repeat="post in $ctrl.myPosts | orderBy: $ctrl.sort.query: true"></post>
+  <mypost deletepost="$ctrl.deletePost(postId)" post="post" ng-repeat="post in $ctrl.myPosts | orderBy: $ctrl.sort.query: true"></mypost>
 </div>
