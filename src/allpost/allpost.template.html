@@ -15,7 +15,7 @@
           <ng-md-icon icon="mode_comment" style="fill: gray" size="20"></ng-md-icon>
         </md-button>
       </md-card-actions>
-      <comments ng-show="showComments" comments="$ctrl.comments" deletecomment="$ctrl.deleteComment(commentId)"></comments>
-      <addcomments ng-show="showComments" postid='$ctrl.post.id' addcomment="$ctrl.addComment(post, comment)"></addcomments>
+      <allcomments ng-show="showComments" length="$ctrl.length" comments="$ctrl.comments"></allcomments>
+      <addcomments ng-if="$ctrl.serviceGetCurrentUser.login" ng-show="showComments" postid='$ctrl.post.id' addcomment="$ctrl.addComment(post, comment)"></addcomments>
     </md-card-content>
   </md-card>

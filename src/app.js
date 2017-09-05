@@ -14,7 +14,8 @@ import serviceMyPost from './services/myposts.service'
 import serviceSingup from './services/singup.service'
 import route from './route.config'
 import serviceComments from './services/comments.service'
-import comments from './comments/comments.component'
+import mycomments from './mycomments/mycomments.component'
+import allcomments from './allcomments/allcomments.component'
 import login from './login/login.component'
 import singup from './singup/singup.component'
 import addcomments from './addcomments/addcomments.component'
@@ -35,12 +36,13 @@ angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIco
   .component('allposts', allposts)
   .component('mypost', mypost)
   .component('myPosts', myPosts)
-  .component('comments', comments)
+  .component('mycomments', mycomments)
   .component('login', login)
   .component('singup', singup)
   .component('addcomments', addcomments)
   .component('toolbar', toolbar)
   .component('deletecomment', deletecomment)
+  .component('allcomments', allcomments)
   .component('allpost', allpost)
   .service('servicePost', servicePost)
   .service('serviceMyPost', serviceMyPost)

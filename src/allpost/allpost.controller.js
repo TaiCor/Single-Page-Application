@@ -1,9 +1,10 @@
 export default class postController {
-  constructor (serviceComments, serviceAddcomments, serviceDeleteComment, $mdDialog) {
+  constructor (serviceComments, serviceAddcomments, serviceDeleteComment, $mdDialog, serviceGetCurrentUser) {
     this.serviceDeleteComment = serviceDeleteComment
     this.serviceComments = serviceComments
     this.serviceAddcomments = serviceAddcomments
     this.$mdDialog = $mdDialog
+    this.serviceGetCurrentUser = serviceGetCurrentUser
   }
 
   $onInit () {
