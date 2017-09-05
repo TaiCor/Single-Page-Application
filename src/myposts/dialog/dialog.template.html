@@ -12,7 +12,8 @@
           </md-input-container>
           <div layout="row">  
           <input accept="image/*" name="file" class="" ngf-select="" ng-model="$ctrl.picFile" id="input-file-id"  type="file" style="display:none"/>
-          <label for="input-file-id" class="md-button md-raised md-primary" ng-show="!$ctrl.picFile">Choose Files</label></div>
+          <label for="input-file-id" class="md-button md-raised md-primary" ng-show="!$ctrl.picFile">Choose Files</label>
+        </div>
           <img ng-show="myForm.file.$valid" ngf-thumbnail="!$ctrl.picFile.$error && $ctrl.picFile" class="thumb"></img>
           <div class="confirm">
           <md-button type="submit" class="md-raised md-primary" aria-label="Done!" ng-disabled="$ctrl.checkInput()" ng-if="$ctrl.picFile" ng-click="$ctrl.addPost()">
