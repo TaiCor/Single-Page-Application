@@ -2,8 +2,9 @@ import controller from './dialog/dialog.controller'
 import template from './dialog/dialog.template.html'
 
 export default class commentsController {
-  constructor ($mdDialog) {
+  constructor ($mdDialog, serviceGetCurrentUser) {
     this.$mdDialog = $mdDialog
+    this.serviceGetCurrentUser = serviceGetCurrentUser
   }
   delete (commentId) {
     this.deletecomment({commentId: commentId})
