@@ -6,18 +6,18 @@
     </md-card-header-text>
   </md-card-header>
   <img class="md-card-image" src="{{$ctrl.post.url}}">
-    <md-card-title>
-    <h1 class='md-headline'>{{$ctrl.post.title}}</h1>
-    <md-card-actions class="edit">
-      <md-button class="md-primary" ng-click="$ctrl.editDialog($event, $ctrl.post.title, $ctrl.post.description, $ctrl.post.id)">
-        <ng-md-icon icon="edit" style="fill: blue" size="16"></ng-md-icon> 
-        edit
-      </md-button>
-      <md-button class="md-warn" ng-click="$ctrl.delete()">
-        <ng-md-icon icon="clear" style="fill: orange" size="20" ng-click=""></ng-md-icon>
-        delete
-      </md-button>
-    </md-card-actions>
+    <md-card-title layout layout-align="space-between center">
+      <span class='md-headline'>{{$ctrl.post.title}}</span>
+      <div layout>
+        <md-button class="md-icon-button" ng-click="$ctrl.editDialog($event, $ctrl.post.title, $ctrl.post.description, $ctrl.post.id)">
+          <ng-md-icon icon="edit" style="fill: blue"></ng-md-icon> 
+          <md-tooltip md-direction="bottom">Edit</md-tooltip>
+        </md-button>
+        <md-button class="md-icon-button" ng-click="$ctrl.delete()">
+          <ng-md-icon icon="clear" ng-click=""></ng-md-icon>
+          <md-tooltip md-direction="bottom">Delete</md-tooltip>
+        </md-button>
+      </div>
     </md-card-title>
     <md-card-content>
     <p>{{$ctrl.post.description}}</p>

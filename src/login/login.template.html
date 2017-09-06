@@ -1,17 +1,25 @@
-<form enctype="application/x-www-form-urlencoded">
-  <div layout="column" flex="40" flex-offset="30">
+<form name="login" enctype="application/x-www-form-urlencoded">
+  <div layout="column" flex="30" flex-offset="35">
     <h1 class="md-head-line">Log in</h1>
   <md-input-container class="forms">
       <label>Login</label>
-      <input required minlength="3" ng-model="$ctrl.data.login">
+      <input name="login" required md-maxlength="40" ng-model="$ctrl.data.login">
+      <div ng-messages="login.login.$error" role="alert">
+        <div ng-message="required">This is required field.</div>
+        <div ng-message="md-maxlength">The login can not be more than 40 long.</div>
+      </div>  
     </md-input-container>
     <md-input-container>
       <label>Password</label>
-      <input type="password" minlength="3" required ng-model="$ctrl.data.password">
+      <input type="password" md-maxlength="50" required ng-model="$ctrl.data.password">
+      <div ng-messages="login.login.$error" role="alert">
+        <div ng-message="required">This is required field.</div>
+        <div ng-message="md-maxlength">The login can not be more than 40 long.</div>
+      </div>
     </md-input-container>
-    <md-input-container>
-      <md-button layout-align="center end" class="md-raised" ng-disabled="$ctrl.checkInput()" type='submit' ng-click="$ctrl.login()">Submit</md-button>
-    </md-input-container>
+    <div layout="row" layout-align="end center">
+      <md-button class="md-raised submit" ng-disabled="login.$invalid" type='submit' ng-click="$ctrl.login()">Submit</md-button>
+    </div>
   </div>
 </form>
 
