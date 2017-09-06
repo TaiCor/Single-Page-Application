@@ -53,7 +53,7 @@ md-card-actions.margin-align {
 md-card-actions.edit {
     margin-top: 13px;
 }
-button.addpost {
+label.addpost, button.addpost {
     margin-left: 0px 
 }
 button.submit{

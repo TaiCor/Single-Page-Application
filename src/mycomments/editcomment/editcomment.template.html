@@ -1,0 +1,22 @@
+<md-dialog>
+  <md-dialog-content class="size">
+    <div class='md-dialog-content'>
+      <form name="editcomment">    
+      <div layout="column">
+        <md-input-container>
+          <label>Edit comment</label>
+          <input type="text" name="body" required ng-model="$ctrl.comment" md-maxlength="255">
+          <div ng-messages="editcomment.body.$error" role="alert">
+            <div ng-message="required">This is required field.</div>
+            <div ng-message="md-maxlength">The description can not be more than 500 long.</div>
+          </div>
+          </md-input-container>
+          <div layout="row" layout-align="end center">
+            <md-button class="edit" ng-click="$ctrl.edit()">Edit</md-button>
+            <md-button class="md-warn" ng-click="$ctrl.$mdDialog.hide()">cancel</md-button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </md-dialog-content>
+</md-dialog>

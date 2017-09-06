@@ -1,5 +1,5 @@
-import controller from './dialog/dialog.controller'
-import template from './dialog/dialog.template.html'
+import controller from './addpost/addpost.controller'
+import template from './addpost/addpost.template.html'
 
 export default class myPostController {
   constructor (serviceMyPost, $mdDialog, serviceDeletePost) {

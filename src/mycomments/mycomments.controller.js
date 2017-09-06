@@ -1,5 +1,5 @@
-import controller from './dialog/dialog.controller'
-import template from './dialog/dialog.template.html'
+import controller from './editcomment/editcomment.controller'
+import template from './editcomment/editcomment.template.html'
 
 export default class commentsController {
   constructor ($mdDialog, serviceGetCurrentUser) {

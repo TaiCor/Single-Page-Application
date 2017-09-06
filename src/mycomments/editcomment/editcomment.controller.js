@@ -1,4 +1,4 @@
-export default class dialogCintroller {
+export default class dialogController {
   constructor (comment, id, serviceEditComment, $mdDialog) {
     this.$mdDialog = $mdDialog
     this.comment = comment

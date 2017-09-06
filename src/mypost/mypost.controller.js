@@ -1,5 +1,5 @@
-import template from './dialog/dialog.template.html'
-import controller from './dialog/dialog.controller'
+import template from './editpost/editpost.template.html'
+import controller from './editpost/editpost.controller'
 
 export default class postController {
   constructor (serviceComments, serviceAddcomments, serviceDeleteComment, $mdDialog) {
@@ -28,11 +28,13 @@ export default class postController {
         this.author_name = res.data['0'].author_name
         this.commented = res.data['0'].commented
         this.comment_id = res.data['0'].comment_id
+        this.author_id = res.data['0'].author_id
         this.data = {
           'author_name': this.author_name,
           'comment': this.comment,
           'commented': this.commented,
-          'id': this.comment_id
+          'comment_id': this.comment_id,
+          'author_id': this.author_id
         }
         this.comments.push(this.data)
         this.length += 1
