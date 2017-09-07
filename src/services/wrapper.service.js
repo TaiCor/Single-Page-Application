@@ -3,7 +3,7 @@ export default class wrapperService {
     this.url = 'http://localhost:3000/'
     this.$http = $http
   }
-  wrap (query, data, method = 'POST') {
+  wrap (query, data, method = 'GET') {
     return this.$http({
       method,
       url: this.url + query,
