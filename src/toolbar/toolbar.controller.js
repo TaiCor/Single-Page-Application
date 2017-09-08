@@ -1,17 +1,16 @@
 export default class toolbarController {
-  constructor (serviceGetCurrentUser, serviceLogout, $location) {
+  constructor (serviceGetCurrentUser, serviceAuth, $location) {
     this.serviceGetCurrentUser = serviceGetCurrentUser
-    this.serviceLogout = serviceLogout
+    this.serviceAuth = serviceAuth
     this.$location = $location
   }
   logoutUser () {
-    this.serviceLogout.logout()
+    this.serviceAuth.logout()
     .then(
     (res) => {
       this.$location.path('/allpost')
       this.serviceGetCurrentUser.setCurrentUser(res)
       this.session = res.data
-      console.log(this.session.id)
     })
   }
   checkUser () {

@@ -1,0 +1,32 @@
+<form name="singup" enctype="application/x-www-form-urlencoded"> 
+  <div layout="column" flex="30" flex-offset="35">
+    <h1 class="md-head-line">Sing up</h1>
+    <md-input-container>
+      <label>Name</label>
+      <input required class="md-input" ng-model="$ctrl.data.name" name="name" md-maxlength="40">
+      <div ng-messages="singup.name.$error" role="alert">
+        <div ng-message="required">This is required field.</div>
+        <div ng-message="md-maxlength">The description can not be more than 40 long.</div>
+      </div>
+    </md-input-container>
+    <md-input-container>
+      <label>Login</label>
+      <input required class="md-input" ng-model='$ctrl.data.login' name='login' md-maxlength="40">
+      <div ng-messages="singup.login.$error" role="alert">
+        <div ng-message="required">This is required field.</div>
+        <div ng-message="md-maxlength">The login can not be more than 40 long.</div>
+      </div>  
+    </md-input-container>
+    <md-input-container>
+      <label>Password</label>
+      <input required class="md-input" ng-model="$ctrl.data.password" type="password" ng-model name='password' md-maxlength="50">
+      <div ng-messages="singup.password.$error" role="alert">
+        <div ng-message="required">This is required field.</div>
+        <div ng-message="md-maxlength">The password can not be more than 50 long.</div>
+      </div>  
+    </md-input-container>
+    <div layout="row" layout-align="end center">
+      <md-button class="md-raised submit" ng-disabled='singup.$invalid' type='submit' ng-click="$ctrl.singup()">Submit</md-button>
+    </div>
+  </div>
+</form>

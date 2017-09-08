@@ -1,8 +1,20 @@
 export default class commentsService {
-  constructor ($http) {
-    this.$http = $http
+  constructor (wrapper) {
+    this.wrapper = wrapper
   }
   getComments (postId) {
-    return this.$http.post('http://localhost:3000/getCommentsByPhotoId', { postId }, { withCredentials: true })
+    return this.wrapper.wrap('getCommentsByPhotoId', 'POST', {postId})
+  }
+
+  addComment (photoId, comment) {
+    return this.wrapper.wrap('addComment', 'POST', {photoId, comment})
+  }
+
+  deleteComment (commentId) {
+    return this.wrapper.wrap('deleteCommentById', 'POST', {commentId})
+  }
+
+  editComment (commentId, bodyComment) {
+    return this.wrapper.wrap('changeComment', 'POST', {commentId, bodyComment})
   }
 }

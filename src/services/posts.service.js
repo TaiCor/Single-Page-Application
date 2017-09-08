@@ -1,8 +1,34 @@
 export default class postsService {
-  constructor ($http) {
-    this.$http = $http
+  constructor (wrapper, Upload) {
+    this.wrapper = wrapper
+    this.Upload = Upload
   }
   getPosts () {
-    return this.$http.get('http://localhost:3000/getAllPhotos', { withCredentials: true })
+    return this.wrapper.wrap('getAllPhotos', 'GET')
+  }
+
+  getMyPosts () {
+    return this.wrapper.wrap('getUserPhotos', 'GET')
+  }
+
+  deletePost (photoId) {
+    return this.wrapper.wrap('deletePhotoById', 'POST', {photoId})
+  }
+
+  editPost (photoId, title, description) {
+    return this.wrapper.wrap('changePhoto', 'POST', {photoId, title, description})
+  }
+
+  addPost (postPic, postTitle, postDescription) {
+    return this.Upload.upload({
+      method: 'POST',
+      url: 'http://localhost:3000/addPost',
+      withCredentials: true,
+      data: {
+        title: postTitle,
+        description: postDescription,
+        file: postPic
+      }
+    })
   }
 }
