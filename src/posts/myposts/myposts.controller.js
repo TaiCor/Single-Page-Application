@@ -1,10 +1,10 @@
 import controller from './addpost/addpost.controller'
 import template from './addpost/addpost.template.html'
 
-export default class myPostController {
+export default class myPostsController {
   constructor (servicePosts, $mdDialog) {
     this.$mdDialog = $mdDialog
-    this.sort = {query: 'date'}
+    this.sort = 'date'
     this.servicePosts = servicePosts
     servicePosts.getMyPosts()
       .then(myPosts => {

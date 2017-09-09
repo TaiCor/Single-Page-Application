@@ -1,7 +1,4 @@
-<md-radio-group layout="row" ng-model="$ctrl.sort.query">
-  <md-radio-button value="-title" class="md-primary">Alphabetical</md-radio-button>
-  <md-radio-button value="date" class="md-primary">New first</md-radio-button>
-</md-radio-group>
+<sort sortkey='$ctrl.sort'></sort>
 <h1 class="md-display-2" layout="row" layout-align="center">My Posts</h1>
 <div class="column">
   <div flex-offset="30" layout="row" layout-align="start center">
@@ -9,5 +6,5 @@
       <ng-md-icon icon="add" style="fill: white" size="20px"></ng-md-icon> Add post
     </md-button>
   </div>
-  <mypost deletepost="$ctrl.deletePost(postId)" post="post" ng-repeat="post in $ctrl.myPosts | orderBy: $ctrl.sort.query: true"></mypost>
+  <mypost deletepost="$ctrl.deletePost(postId)" post="post" ng-repeat="post in $ctrl.myPosts | orderBy: $ctrl.sort: true"></mypost>
 </div>
