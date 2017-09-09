@@ -10,9 +10,5 @@ import './posts/posts.module'
 import './comments/comments.module'
 import './auth/auth.module'
 import './services/service.module'
-import route from './route.config'
-import toolbar from './toolbar/toolbar.component'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons', 'ngMessages', 'postsModule', 'commentsModule', 'authModule', 'serviceModule'])
-  .component('toolbar', toolbar)
-  .config(route)
