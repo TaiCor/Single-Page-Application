@@ -1,6 +1,6 @@
 export default class controllerPhotos {
-  constructor (servicePosts) {
-    this.sort = 'date'
+  constructor (servicePosts, sortfields) {
+    this.sort = sortfields['0'].sortKey
     this.servicePosts = servicePosts
     servicePosts.getPosts()
       .then(posts => {
