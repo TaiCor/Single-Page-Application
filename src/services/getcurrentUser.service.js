@@ -18,6 +18,7 @@ export default class getcurrentUser {
       this.notAuth = false
       this.login = true
       this.user = response.data
+      return this.user
     } else {
       this.notAuth = true
       this.login = false
@@ -27,7 +28,7 @@ export default class getcurrentUser {
   }
 
   getCurrentUser () {
-    this.fetchCurrentUser()
+    return this.fetchCurrentUser()
       .then((res) => {
         this.setCurrentUser(res)
       })

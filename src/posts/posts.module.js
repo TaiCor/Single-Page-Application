@@ -1,11 +1,11 @@
 import angular from 'angular'
-
 import mypost from './mypost/mypost.component'
 import allposts from './allposts/allposts.component'
 import myPosts from './myposts/myposts.component'
 import allpost from './allpost/allpost.component'
 import toolbar from './toolbar/toolbar.component'
 import sort from './sort/sort.component'
+import profile from './profile/profile.component'
 
 const sortfields = [
   {
@@ -25,4 +25,5 @@ angular.module('postsModule', [])
   .component('allpost', allpost)
   .component('toolbar', toolbar)
   .component('sort', sort)
+  .component('profile', profile)
   .constant('sortfields', sortfields)

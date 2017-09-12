@@ -1,0 +1,20 @@
+<div layout="column" flex="40" flex-offset="30">
+    <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Profile info</span>
+            <span class="md-title padding">Name: {{$ctrl.serviceGetCurrentUser.user.name}}</span>
+            <span class="md-title padding">Login: {{$ctrl.serviceGetCurrentUser.user.login}}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <ng-md-icon icon="account_box" style="fill: #313A75" size="150px"></ng-md-icon> 
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" ng-click="$ctrl.editDialog($event, $ctrl.serviceGetCurrentUser.user.login, $ctrl.serviceGetCurrentUser.user.name)">
+            <ng-md-icon icon="edit" style="fill:#88d8b0"></ng-md-icon> 
+            <md-tooltip md-direction="bottom">Edit</md-tooltip>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+</div>

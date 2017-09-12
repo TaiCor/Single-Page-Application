@@ -1,11 +1,22 @@
 <md-toolbar layout="row" layout-align='start center'>
-  <md-button class='md-raised' ui-sref='allposts'>All Posts</md-button>
-  <md-button ng-disabled="$ctrl.checkUser()" class='md-raised' ui-sref='myposts'>My Posts</md-button>
+  <md-button ng-class="{'md-accent':$ctrl.buttonActive('/allposts')}" class='md-raised' ui-sref='allposts'>All Posts</md-button>
+  <md-button ng-disabled="$ctrl.checkUser()" ng-class="{'md-accent':$ctrl.buttonActive('/myposts')}" ng-class="{'md-accent': $ctrl.isActive}" class='md-raised' ui-sref='myposts'>My Posts</md-button>
   <span flex></span>
-  <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id === 0' class='md-raised' ui-sref='login'>Log in</md-button>
-  <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id === 0' class='md-raised' ui-sref='singup'>sing up</md-button>
-  <span ng-if='$ctrl.serviceGetCurrentUser.user.id !== 0' class="md-display-1" layout-margin>{{$ctrl.serviceGetCurrentUser.user.name}}</span>
-  <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id !== 0' class="md-icon-button logout" ng-click="$ctrl.logoutUser()" aria-label="logout">
-    <ng-md-icon icon="logout" style="fill: white" size="24px"></ng-md-icon> 
-  </md-button>
+  <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id === 0' class='md-raised' ui-sref='login' ng-class="{'md-accent':$ctrl.buttonActive('/login')}">Log in</md-button>
+  <md-button ng-if='$ctrl.serviceGetCurrentUser.user.id === 0' class='md-raised' ui-sref='singup' ng-class="{'md-accent':$ctrl.buttonActive('/singup')}">sing up</md-button>
+  <md-menu ng-if='$ctrl.serviceGetCurrentUser.user.id !== 0'>
+    <md-button class="font" aria-label="Open interactions menu" ng-click="$mdMenu.open($event)">
+      <label>{{$ctrl.serviceGetCurrentUser.user.name}}</label> 
+    </md-button>
+    <md-menu-content width="2">
+      <md-button ui-sref="profile">
+          <ng-md-icon icon="account_box" style="fill: black" size="30px"></ng-md-icon>
+        Profile
+      </md-button>
+      <md-button ng-click="$ctrl.showConfirm($event)">
+        <ng-md-icon icon="logout" style="fill: black" size="24px"></ng-md-icon>               
+        Logout
+      </md-button>
+    </md-menu-content>
+  </md-menu>
 </md-toolbar>

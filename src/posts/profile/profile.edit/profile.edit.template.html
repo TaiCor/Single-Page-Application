@@ -1,0 +1,30 @@
+<md-dialog>
+    <md-dialog-content class="size">
+      <div class='md-dialog-content'>
+        <form name="edit">    
+        <div layout="column">
+            <md-input-container>
+              <label>Edit name</label>
+              <input type="text" name="name" ng-model="$ctrl.name" required md-maxlength="40">
+              <div ng-messages="edit.name.$error" role="alert">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The name can not be more than 40 long.</div>
+              </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Edit login</label>
+                <input type="text" name="login" ng-model="$ctrl.login" required md-maxlength="50">
+                <div ng-messages="edit.name.$error" role="alert">
+                  <div ng-message="required">This is required.</div>
+                  <div ng-message="md-maxlength">The name can not be more than 50 long.</div>
+                </div>
+            </md-input-container>
+          <div layout="row" layout-align="end center">
+            <md-button class="edit" ng-disabled="edit.$invalid" ng-click="$ctrl.editProfile()">Edit</md-button>
+            <md-button class="md-warn" ng-click="$ctrl.close()">cancel</md-button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </md-dialog-content>
+  </md-dialog>

@@ -31,4 +31,8 @@ export default class postsService {
       }
     })
   }
+
+  changeUser (login, name) {
+    return this.wrapper.wrap('changeUser', 'POST', {login, name})
+  }
 }

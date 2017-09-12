@@ -5,20 +5,21 @@ export default function routes ($stateProvider, $urlRouterProvider) {
       url: '/allposts',
       component: 'allposts'
     })
-  $stateProvider
     .state('myposts', {
       url: '/myposts',
       component: 'myPosts'
     })
-  $stateProvider
     .state('login', {
       url: '/login',
       component: 'login'
     })
-  $stateProvider
     .state('singup', {
       url: '/singup',
       component: 'singup'
+    })
+    .state('profile', {
+      url: '/profile',
+      component: 'profile'
     })
   $urlRouterProvider
     .otherwise('/allposts')

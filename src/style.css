@@ -59,3 +59,13 @@ label.addpost, button.addpost {
 button.submit{
     margin-right: 0px
 }
+
+button.font{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+
+span.padding {
+    padding-top: 3%;
+}
