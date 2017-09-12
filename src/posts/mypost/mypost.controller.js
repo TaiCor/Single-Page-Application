@@ -65,6 +65,19 @@ export default class postController {
       this.post.updated = res.updated
     })
   }
+  showConfirm (ev) {
+    let confirm = this.$mdDialog.confirm()
+    .textContent('Delete this post?')
+    .ariaLabel('delete')
+    .targetEvent(ev)
+    .ok('No')
+    .cancel('Yes')
+
+    this.$mdDialog.show(confirm).then(
+      () => { this.$mdDialog.hide() },
+      () => { return this.delete() }
+    )
+  }
   checkUpdatePost () {
     if (this.post.updated === null) {
       return false
