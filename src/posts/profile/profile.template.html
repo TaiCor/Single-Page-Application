@@ -11,9 +11,13 @@
           </md-card-title-media>
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
-          <md-button class="md-icon-button" ng-click="$ctrl.editDialog($event, $ctrl.serviceGetCurrentUser.user.login, $ctrl.serviceGetCurrentUser.user.name)">
+          <md-button class="md-icon-button" ng-click="$ctrl.editDialog($event, $ctrl.serviceGetCurrentUser.user.name, $ctrl.serviceGetCurrentUser.user.login)">
             <ng-md-icon icon="edit" style="fill:#88d8b0"></ng-md-icon> 
             <md-tooltip md-direction="bottom">Edit</md-tooltip>
+          </md-button>
+          <md-button class="md-icon-button" ng-click="$ctrl.changeDialog($event)">
+            <ng-md-icon icon="lock" style="fill:#ff6f69"></ng-md-icon> 
+            <md-tooltip md-direction="bottom">Change password</md-tooltip>
           </md-button>
         </md-card-actions>
       </md-card>

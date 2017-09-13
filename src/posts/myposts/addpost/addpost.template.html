@@ -2,6 +2,11 @@
   <md-dialog-content>
     <div class='md-dialog-content'>
       <form layout="column" name="newpost">
+          <div layout="row">  
+              <input accept="image/*" name="file" ngf-select="" ng-model="$ctrl.picFile" id="input-file-id"  type="file" style="display:none"/>
+              <label for="input-file-id" class="md-button md-raised md-primary addpost" ng-show="!$ctrl.picFile">Choose Files</label>
+            </div>          
+              <img ng-show="myForm.file.$valid" ngf-thumbnail="!$ctrl.picFile.$error && $ctrl.picFile" class="thumb"></img> 
           <md-input-container>
             <label>Title</label>
             <input required md-maxlength="50" ng-model='$ctrl.data.title' name="title"></input>
@@ -18,19 +23,14 @@
               <div ng-message="md-maxlength">The description can not be more than 500 long.</div>
             </div>
           </md-input-container>
-          <div layout="row">  
-          <input accept="image/*" name="file" ngf-select="" ng-model="$ctrl.picFile" id="input-file-id"  type="file" style="display:none"/>
-          <label for="input-file-id" class="md-button md-raised md-primary addpost" ng-show="!$ctrl.picFile">Choose Files</label>
-        </div>
-          <img ng-show="myForm.file.$valid" ngf-thumbnail="!$ctrl.picFile.$error && $ctrl.picFile" class="thumb"></img>
-          <div class="confirm">
-          <md-button type="submit" class="md-raised md-primary addpost" aria-label="Done!" ng-disabled="newpost.$invalid" ng-if="$ctrl.picFile" ng-click="$ctrl.addPost()">
-              Done!
-          </md-button>
-          <md-button class="md-raised md-warn" aria-label="reset" ng-if="$ctrl.picFile" ng-click="$ctrl.picFile = null">
-              Reset
-          </md-button>
-        </div>
+          <div class="confirm" layout-align="center end">
+              <md-button type="submit" class="md-raised md-primary addpost" aria-label="Done!" ng-disabled="newpost.$invalid" ng-if="$ctrl.picFile" ng-click="$ctrl.addPost()">
+                  Done!
+              </md-button>
+              <md-button class="md-raised md-warn" aria-label="reset" ng-if="$ctrl.picFile" ng-click="$ctrl.picFile = null">
+                  Reset
+              </md-button>
+            </div>
         </form>
       </div>  
   </md-dialog-content>

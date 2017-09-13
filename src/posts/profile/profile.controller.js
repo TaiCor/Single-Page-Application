@@ -1,13 +1,12 @@
 import template from './profile.edit/profile.edit.template.html'
 import controller from './profile.edit/profile.edit.controller'
+import templateChangePass from './profile.changePassword/profile.changePassword.template.html'
+import controllerChangePass from './profile.changePassword/profile.changePassword.controller'
 
 export default class profileController {
   constructor (serviceGetCurrentUser, $mdDialog) {
     this.$mdDialog = $mdDialog
     this.serviceGetCurrentUser = serviceGetCurrentUser
-  }
-  changeUser () {
-    this.servicePosts.changeUser(this.serviceGetCurrentUser.user.login, this.serviceGetCurrentUser.user.name)
   }
   editDialog (event, name, login) {
     this.$mdDialog.show({
@@ -22,6 +21,15 @@ export default class profileController {
     .then(res => {
       this.serviceGetCurrentUser.user.login = res.login
       this.serviceGetCurrentUser.user.name = res.name
+    })
+  }
+  changeDialog (event) {
+    this.$mdDialog.show({
+      template: templateChangePass,
+      controller: controllerChangePass,
+      controllerAs: '$ctrl',
+      clickOutsideToClose: true,
+      targetEvent: event
     })
   }
 }

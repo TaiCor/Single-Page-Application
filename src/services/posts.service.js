@@ -35,4 +35,8 @@ export default class postsService {
   changeUser (login, name) {
     return this.wrapper.wrap('changeUser', 'POST', {login, name})
   }
+
+  changePassword (oldPassword, newPassword) {
+    return this.wrapper.wrap('changePassword', 'POST', {oldPassword, newPassword})
+  }
 }

@@ -14,9 +14,9 @@
             <md-input-container>
                 <label>Edit login</label>
                 <input type="text" name="login" ng-model="$ctrl.login" required md-maxlength="50">
-                <div ng-messages="edit.name.$error" role="alert">
+                <div ng-messages="edit.login.$error" role="alert">
                   <div ng-message="required">This is required.</div>
-                  <div ng-message="md-maxlength">The name can not be more than 50 long.</div>
+                  <div ng-message="md-maxlength">The login can not be more than 50 long.</div>
                 </div>
             </md-input-container>
           <div layout="row" layout-align="end center">
