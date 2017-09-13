@@ -13,7 +13,7 @@
           <md-button ng-if='comment.author_id === $ctrl.serviceGetCurrentUser.user.id' aria-label="button-label" ng-click='$ctrl.showDialog($event, comment.comment, comment.id)'>
             <ng-md-icon icon="mode_edit" style="fill: black" size="20"></ng-md-icon> Update
           </md-button>
-          <md-button aria-label="button-label" ng-click='$ctrl.delete(comment.id)'>
+          <md-button aria-label="button-label" ng-click='$ctrl.delete(comment.id, $event)'>
               <ng-md-icon icon="delete" style="fill: black" size="20"></ng-md-icon> delete
             </md-button>
         </md-menu-content>

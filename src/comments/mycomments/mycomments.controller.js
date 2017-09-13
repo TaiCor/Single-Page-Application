@@ -6,8 +6,18 @@ export default class commentsController {
     this.$mdDialog = $mdDialog
     this.serviceGetCurrentUser = serviceGetCurrentUser
   }
-  delete (commentId) {
-    this.deletecomment({commentId: commentId})
+  delete (commentId, ev) {
+    let confirm = this.$mdDialog.confirm()
+    .textContent('Delete this comment?')
+    .ariaLabel('delete')
+    .targetEvent(ev)
+    .ok('No')
+    .cancel('Yes')
+
+    this.$mdDialog.show(confirm).then(
+      () => { this.$mdDialog.hide() },
+      () => { this.deletecomment({commentId: commentId}) }
+    )
   }
 
   showDialog (event, comment, id) {

@@ -31,7 +31,7 @@ export default class postController {
           'author_name': this.author_name,
           'comment': this.comment,
           'commented': this.commented,
-          'comment_id': this.comment_id,
+          'id': this.comment_id,
           'author_id': this.author_id
         }
         this.comments.push(this.data)
