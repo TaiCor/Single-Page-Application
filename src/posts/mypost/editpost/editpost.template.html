@@ -19,12 +19,12 @@
                 <div ng-message="md-maxlength">The description can not be more than 500 long.</div>
               </div>
           </md-input-container>
-        <md-dialog-actions layout="row" layout-align="end center">
-          <md-button class="edit" ng-disabled="edit.$invalid" ng-click="$ctrl.edit()">Edit</md-button>
-          <md-button class="md-warn" ng-click="$ctrl.$mdDialog.hide()">cancel</md-button>
-        </md-dialog-actions>
       </div>
-    </form>
     </div>
   </md-dialog-content>
+  <md-dialog-actions layout="row" layout-align="end center">
+    <md-button class="edit" ng-disabled="edit.$invalid" ng-click="$ctrl.edit()">Edit</md-button>
+    <md-button class="md-warn" ng-click="$ctrl.$mdDialog.hide()">cancel</md-button>
+  </md-dialog-actions>
+</form>
 </md-dialog>

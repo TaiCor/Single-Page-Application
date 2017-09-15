@@ -6,7 +6,7 @@ export default class profileEditController {
     this.servicePosts = servicePosts
   }
   close () {
-    this.$mdDialog.hide()
+    this.$mdDialog.hide(event)
   }
   editProfile () {
     this.servicePosts.changeUser(this.login, this.name)

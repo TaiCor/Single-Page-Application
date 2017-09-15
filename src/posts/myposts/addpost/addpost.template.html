@@ -23,15 +23,15 @@
               <div ng-message="md-maxlength">The description can not be more than 500 long.</div>
             </div>
           </md-input-container>
-          <md-dialog-actions layout-align="end center" layout="row" ng-if="$ctrl.picFile">
-            <md-button type="submit" class="md-raised md-primary addpost" aria-label="Done!" ng-disabled="newpost.$invalid" ng-click="$ctrl.addPost()">
-                Done!
-            </md-button>
-            <md-button class="md-raised md-warn" aria-label="reset" ng-click="$ctrl.picFile = null">
-                Reset
-            </md-button>
-          </md-dialog-actions>
-        </form>
-      </div>  
+      </div>
   </md-dialog-content>
+  <md-dialog-actions layout-align="end center" layout="row" ng-if="$ctrl.picFile">
+    <md-button type="submit" class="md-raised md-primary addpost" aria-label="Done!" ng-disabled="newpost.$invalid" ng-click="$ctrl.addPost()">
+        Done!
+    </md-button>
+    <md-button class="md-raised md-warn" aria-label="reset" ng-click="$ctrl.picFile = null">
+        Reset
+    </md-button>
+  </md-dialog-actions>
+</form>
 </md-dialog>
