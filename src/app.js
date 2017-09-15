@@ -12,3 +12,4 @@ import './auth/auth.module'
 import './services/service.module'
 
 angular.module('fotoalbum', ['ngMaterial', 'ui.router', 'ngFileUpload', 'ngMdIcons', 'ngMessages', 'postsModule', 'commentsModule', 'authModule', 'serviceModule'])
+  .constant('baseUrl', 'http://localhost:3000/')

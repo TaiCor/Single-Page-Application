@@ -1,6 +1,6 @@
 export default class wrapperService {
-  constructor ($http) {
-    this.url = 'http://localhost:3000/'
+  constructor ($http, baseUrl) {
+    this.url = baseUrl
     this.$http = $http
   }
   wrap (query, method, data) {
