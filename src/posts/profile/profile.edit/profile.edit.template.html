@@ -19,10 +19,10 @@
                   <div ng-message="md-maxlength">The login can not be more than 50 long.</div>
                 </div>
             </md-input-container>
-          <div layout="row" layout-align="end center">
+          <md-dialog-actions layout="row" layout-align="end center">
             <md-button class="edit" ng-disabled="edit.$invalid" ng-click="$ctrl.editProfile()">Edit</md-button>
             <md-button class="md-warn" ng-click="$ctrl.close()">cancel</md-button>
-          </div>
+          </md-dialog-actions>
         </div>
       </form>
       </div>

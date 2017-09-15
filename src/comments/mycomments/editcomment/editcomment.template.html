@@ -11,11 +11,11 @@
             <div ng-message="md-maxlength">The comment can not be more than 250 long.</div>
           </div>
           </md-input-container>
-          <div layout="row" layout-align="end center">
+          <md-dialog-actions layout="row" layout-align="end center">
             <md-button class="edit" ng-click="$ctrl.edit()">Edit</md-button>
             <md-button class="md-warn" ng-click="$ctrl.$mdDialog.hide()">cancel</md-button>
           </div>
-        </div>
+        </md-dialog-actions>
       </form>
     </div>
   </md-dialog-content>
