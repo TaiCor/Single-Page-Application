@@ -23,7 +23,7 @@ export default class profileController {
       if (res) {
       this.serviceGetCurrentUser.user.login = res.login
       this.serviceGetCurrentUser.user.name = res.name
-      } else {
+      } else if (res === false) {
         this.$mdToast.show(
           this.$mdToast.simple()
             .textContent('Login is already taken')
@@ -31,6 +31,7 @@ export default class profileController {
             .hideDelay(3000)
         )
       }
+        else {}
     })
   }
   changeDialog (event) {
