@@ -10,8 +10,8 @@
           <ng-md-icon icon="more_vert" style="fill: black" size="25"></ng-md-icon>
         </md-button>
         <md-menu-content width="2"> 
-          <md-menu-item>        
-            <md-button ng-if='comment.author_id === $ctrl.serviceGetCurrentUser.user.id' aria-label="button-label" ng-click='$ctrl.showDialog($event, comment.comment, comment.id)'>
+          <md-menu-item ng-if='comment.author_id === $ctrl.serviceGetCurrentUser.user.id'>        
+            <md-button  aria-label="button-label" ng-click='$ctrl.showDialog($event, comment.comment, comment.id)'>
               <ng-md-icon icon="mode_edit" style="fill: black" size="20"></ng-md-icon> Update
           </md-button>
         </md-menu-item>
