@@ -2,9 +2,10 @@ import controller from './addpost/addpost.controller'
 import template from './addpost/addpost.template.html'
 
 export default class myPostsController {
-  constructor (servicePosts, $mdDialog) {
+  constructor (servicePosts, $mdDialog, baseUrl) {
     this.$mdDialog = $mdDialog
     this.sort = 'date'
+    this.baseUrl = baseUrl
     this.servicePosts = servicePosts
     servicePosts.getMyPosts()
       .then(myPosts => {
@@ -19,7 +20,10 @@ export default class myPostsController {
       targetEvent: event,
       clickOutsideToClose: true
     })
-    .then((res) => this.myPosts.push(res))
+    .then((res) => {
+      res.url = `${this.baseUrl}${res.url}`
+      this.myPosts.push(res)
+    })
   }
   deletePost (postId) {
     this.servicePosts.deletePost(postId)

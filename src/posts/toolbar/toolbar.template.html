@@ -9,14 +9,18 @@
       <label>{{$ctrl.serviceGetCurrentUser.user.name}}</label> 
     </md-button>
     <md-menu-content width="2">
+        <md-menu-item>
       <md-button ui-sref="profile">
           <ng-md-icon icon="account_box" style="fill: black" size="30px"></ng-md-icon>
         Profile
       </md-button>
+      </md-menu-item>
+      <md-menu-item>
       <md-button ng-click="$ctrl.showConfirm($event)">
         <ng-md-icon icon="logout" style="fill: black" size="24px"></ng-md-icon>               
         Logout
       </md-button>
+      </md-menu-item>
     </md-menu-content>
   </md-menu>
 </md-toolbar>

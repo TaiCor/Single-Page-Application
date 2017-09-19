@@ -1,7 +1,8 @@
 export default class postsService {
-  constructor (wrapper, Upload) {
+  constructor (wrapper, Upload, baseUrl) {
     this.wrapper = wrapper
     this.Upload = Upload
+    this.baseUrl = baseUrl
   }
   getPosts () {
     return this.wrapper.wrap('getAllPhotos', 'GET')
@@ -22,7 +23,7 @@ export default class postsService {
   addPost (postPic, postTitle, postDescription) {
     return this.Upload.upload({
       method: 'POST',
-      url: 'http://localhost:3000/addPost',
+      url: `${this.baseUrl}addPost`,
       withCredentials: true,
       data: {
         title: postTitle,

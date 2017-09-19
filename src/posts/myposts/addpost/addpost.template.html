@@ -26,10 +26,10 @@
       </div>
   </md-dialog-content>
   <md-dialog-actions layout-align="end center" layout="row" ng-if="$ctrl.picFile">
-    <md-button type="submit" class="md-raised md-primary addpost" aria-label="Done!" ng-disabled="newpost.$invalid" ng-click="$ctrl.addPost()">
-        Done!
+    <md-button type="submit" class="addpost" aria-label="Done" ng-disabled="newpost.$invalid" ng-click="$ctrl.addPost()">
+        Done
     </md-button>
-    <md-button class="md-raised md-warn" aria-label="reset" ng-click="$ctrl.picFile = null">
+    <md-button class="md-warn" aria-label="reset" ng-click="$ctrl.picFile = null">
         Reset
     </md-button>
   </md-dialog-actions>
