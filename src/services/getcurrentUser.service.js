@@ -1,13 +1,12 @@
 export default class getcurrentUser {
-  constructor ($q, $http) {
-    this.$q = $q
-    this.$http = $http
+  constructor (wrapper) {
+    this.wrapper = wrapper
     this.notAuth = true
     this.login = false
   }
 
   fetchCurrentUser () {
-    return this.$http.get('http://localhost:3000/getCurrentUser', { withCredentials: true })
+    return this.wrapper.wrap('getCurrentUser', 'GET')
       .then(user => {
         return user
       })
